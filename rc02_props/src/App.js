@@ -23,6 +23,14 @@ function App() {
    img= "https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_640.jpg"
    color="'Orange" 
    />
+
+<Person 
+   name = "Minnos" 
+   img= "https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_640.jpg"
+  //  color="'Orange" 
+
+  //!  color vermedigmiz halde default olarak propsda belirttigimiz icin grey olarak gelir
+   />
 </div>
   );
 }

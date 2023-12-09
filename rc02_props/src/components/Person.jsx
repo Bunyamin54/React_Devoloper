@@ -2,9 +2,9 @@ import Name from "./Name"
 
 
 
-const Person = (props) => {
-
-  const {name,img,color} = props  //! desturcuring methods 
+const Person = ({name,img,color= "grey"}) => {   //! hava desturctiring yapmak
+    // const Person = (props) => {
+//   const {name,img,color} = props  //! desturcuring methods 
 
   return (
     <div>
