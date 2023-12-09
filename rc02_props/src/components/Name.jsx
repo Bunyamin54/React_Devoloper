@@ -1,9 +1,11 @@
 
 
-const Name = () => {
+const Name = (props) => {
+
+    
   return (
     <div>
- <p>Hello Papy</p>
+ <p>Hello {props.name}</p>
     </div>
   )
 }
