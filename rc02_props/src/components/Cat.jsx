@@ -2,7 +2,7 @@ import Name from "./Name"
 
 
 
-const Person = ({name,img,color= "grey"}) => {   //! hava desturctiring yapmak
+const Cat = ({name,img,color= "grey"}) => {   //! hava desturctiring yapmak
     // const Person = (props) => {
 //   const {name,img,color} = props  //! desturcuring methods 
 
@@ -26,4 +26,4 @@ const Person = ({name,img,color= "grey"}) => {   //! hava desturctiring yapmak
   )
 }
 
-export default Person
+export default Cat
