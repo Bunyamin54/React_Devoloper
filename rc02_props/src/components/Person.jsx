@@ -3,15 +3,26 @@ import Name from "./Name"
 
 
 const Person = (props) => {
+
+  const {name,img,color} = props  //! desturcuring methods 
+
   return (
     <div>
        
-   <Name name= {props.name}/>
-   <img src={props.img} alt="" />
-   <p>Color:{props.color}</p>
+   <Name name= {name}/>
+   <img src={img} alt="" />
+   <p>Color:{color}</p>
    
    
     </div>
+    //   <div>
+       
+    //   <Name name= {props.name}/>
+    //   <img src={props.img} alt="" />
+    //   <p>Color:{props.color}</p>
+      
+      
+    //    </div>
   )
 }
 
