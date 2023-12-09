@@ -4,7 +4,7 @@ function Header () {
     // !JS
     return( 
          <header> 
-        <h1>Hedaer</h1>
+        <h1>Header</h1>
         <p>CW</p>
     {/* JSX */}
         </header>
