@@ -11,7 +11,7 @@ const Card = ({ fagbøker, btn, img }) => {
       <img
         style={{
           cursor: "pointer",
-          transition: "transform 0.5s ease-out",
+          transition: "transform 0.4s ease-out",
           transform: isHovered ? "scale(1.1)" : "scale(1)", // Apply the hover effect conditionally
         }}
         src={img}
