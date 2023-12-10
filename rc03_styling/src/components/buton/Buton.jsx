@@ -2,7 +2,7 @@ import "./Buton.css"
 
 const buton = ({btn}) => {
   return (
-    <div>
+    <div style={{fontSize:"45px"}}>
      {btn}
     </div>
   )
