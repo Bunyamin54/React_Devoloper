@@ -15,7 +15,7 @@ const Card = ({ fagbøker, btn, img }) => {
           transform: isHovered ? "scale(1.1)" : "scale(1)", // Apply the hover effect conditionally
         }}
         src={img}
-        alt="image"
+        alt="img"
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
       />
