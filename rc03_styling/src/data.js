@@ -37,7 +37,7 @@ const data = [
     btnName: " IS-114",
   },
   {
-    id: 7,
+    id: 7,  
     fagbøker: "Organisasjonsteori for IT-studenter",
     img: "https://www.akademika.no/sites/default/files/styles/product_large/public/product_images/978/0/2/7/3/7/6/9780273765608.jpg?itok=dzk58Aoq",
     btnName: " ORG-110",

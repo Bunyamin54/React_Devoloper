@@ -13,14 +13,16 @@ const Card = ({ fagbøker, btn, img }) => {
           cursor: "pointer",
           transition: "transform 0.4s ease-out",
           transform: isHovered ? "scale(1.1)" : "scale(1)", // Apply the hover effect conditionally
+ 
         }}
         src={img}
         alt="img"
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
       />
-      <h2>{btn}</h2>
-      <Buton />
+
+    
+      <Buton btn={btn}  />
     </div>
   );
 };
