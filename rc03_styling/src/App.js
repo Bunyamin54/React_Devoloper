@@ -8,8 +8,23 @@ function App() {
   console.log(data)
   return (
     <div>
-       <h1>LANGUAGES</h1>
-        <Card data={data}/>
+       <h1>IT og informasjonssystemer Bachelor ved UIA</h1>
+
+        
+        {/* <Card data={data}/> */}
+
+        {/* iteraston (3) */}
+
+        {data.map( ({ id,language, img, btnName})  => (
+
+          <Card 
+          key={id}
+          lang={language} 
+          img={img}  
+          btn={btnName} 
+          />
+          ))}
+
         
 
 
