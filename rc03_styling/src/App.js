@@ -15,11 +15,11 @@ function App() {
 
         {/* iteraston (3) */}
 
-        {data.map( ({ id,language, img, btnName})  => (
+        {data.map( ({ id,fagbøker, img, btnName})  => (
 
           <Card 
           key={id}
-          lang={language} 
+          fagbøker={fagbøker} 
           img={img}  
           btn={btnName} 
           />
