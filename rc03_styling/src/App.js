@@ -8,8 +8,8 @@ function App() {
   console.log(data)
   return (
     <div>
-       <h1>React</h1>
-        <Card/>
+       <h1>LANGUAGES</h1>
+        <Card data={data}/>
         
 
 

@@ -6,8 +6,9 @@ import "./Card.css"
 const Card = () => {
   return (
     <div>
-      Card
-      <Buton/>
+  <h1>JS</h1>
+  <img src="" alt="image" />
+  <Buton/>
     </div>
   )
 }
