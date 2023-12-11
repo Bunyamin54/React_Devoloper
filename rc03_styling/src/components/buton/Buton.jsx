@@ -2,9 +2,11 @@ import "./Buton.css"
 
 const buton = ({btn}) => {
   return (
-    <div style={{fontSize:"45px"}}>
-     {btn}
+    <div className="title"> 
+     <button className="btn-white"> {btn} </button>
+
     </div>
+ 
   )
 }
 
