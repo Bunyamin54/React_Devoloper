@@ -2,7 +2,7 @@ import "./Buton.css"
 
 const buton = ({btn}) => {
   return (
-    <div className="title"> 
+    <div className="btn-title"> 
      <button className="btn-white"> {btn} </button>
 
     </div>

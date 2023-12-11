@@ -1,4 +1,7 @@
-.title {
+.img-title {
+    display: block;
+    margin: 4rem auto;
+    width: 700px;
     text-align: center;
     color: white;
     background-color: red;
@@ -6,7 +9,7 @@
   }
   .images {
     display: block;
-    margin: 1rem auto;
+    margin: 3rem auto;
     width: 800px;
     cursor: pointer;
     transition: transform 0.4s ease-in-out; /* Transisyonu buraya ekleyin */
@@ -17,5 +20,18 @@
 }
 
 .images:active {
-    transform: scale(0.8); /* Mouse üzerinden gidince uzaklaşma efektini buraya ekleyin */
+    transform: scale(1.1); /* Mouse üzerinden gidince uzaklaşma efektini buraya ekleyin */
+}
+
+
+h1{
+
+    display: block;
+    margin: 3rem auto;
+    width: 700px;
+    text-align: center;
+    color: red;
+    background-color: rgb(236, 229, 229);
+    padding: 25px;
+
 }

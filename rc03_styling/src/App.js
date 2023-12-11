@@ -8,7 +8,7 @@ function App() {
   console.log(data)
   return (
     <div>
-       <h1 style={{fontSize:"60px", color:"red"}}>IT og informasjonssystemer Bachelor ved UIA 1.Års Fagbøker</h1>
+       <h1>IT og informasjonssystemer Bachelor ved UIA 1.Års Fagbøker</h1>
 
         
         {/* <Card data={data}/> */}
