@@ -1,6 +1,7 @@
 
 import Buton from "../buton/Buton";
-import "./Card.css";
+// import "./Card.css";
+import CardStyle from "./Card.module.css"
 
 const Card = ({ fagbøker, btn, img }) => {
 
