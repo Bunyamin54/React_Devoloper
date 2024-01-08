@@ -1,10 +1,11 @@
  @import "../../scss/variabels";
+ @import "../../scss/mixin";
 
 .header{
     text-align: center;
     margin: 1rem;
     padding: 0.5rem;
-    margin-top: 10rem ;
+    margin-top: 15rem ;
     .text-shadow {
         color: $secondaryColor;
         font-size: 3rem;
@@ -29,5 +30,11 @@
             $cardNavBgColor;
         }
         
+    }
+}
+
+@include media-lg {
+    .header {
+        flex-direction: column;
     }
 }
