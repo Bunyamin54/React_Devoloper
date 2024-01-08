@@ -9,6 +9,7 @@ gap: 2rem;
 .cards{
     width: 500px;
     height: 350px;
+    position: relative;
 }
 
 
@@ -16,5 +17,16 @@ gap: 2rem;
     position: absolute;
     top: 0;
     left: 0;
+    background-color: rgba(0,0,0,0.8);
+    color: $cardNavBgColor;
+    padding: 1rem;
 }
+
+
+  .date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+  }
 }
