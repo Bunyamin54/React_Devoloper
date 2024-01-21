@@ -3,7 +3,7 @@ import { useState } from "react"
 
 const KeyboardClipboard = () => {
 
- const [content, setContent] = useState(second)
+ const [content, setContent] = useState("")
 
 
   return (
@@ -12,12 +12,12 @@ const KeyboardClipboard = () => {
 
    <h2 className="text-center">Keyboard-Clipboard</h2>
 
-   <input type="text" className="form-control" onChange={}/>
+   <input type="text" className="form-control" onChange={ (e) => setContent (e.target.value)}/>
 
 
  <div className="mt-4">
 <h3>Copied Content</h3>
-<p></p>
+<p>{content}</p>
 
  </div>
 
