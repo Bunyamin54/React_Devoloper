@@ -16,11 +16,11 @@ const [formData, setFormData] = useState ({
   const handleSubmit = (e) => {
     console.log(e.target)
     e.preventDefault()
-
-   
   }
 
-
+const handleFormData = (e) => {
+  console.log(e)
+}
   return <div className="container mt-4">
 
     <h2 className="text-center text-success">Form Object In React</h2>
@@ -35,7 +35,7 @@ const [formData, setFormData] = useState ({
       className="form-control"
       id="username"
       aria-describedby="emailHelp"
-      onChange={handleUsername} 
+      onChange={handleFormData} 
       value={username}
       
       
@@ -53,7 +53,7 @@ const [formData, setFormData] = useState ({
       className="form-control"
       id="email"
       aria-describedby="emailHelp"
-      onChange={(e) => setEmail(e.target.value) }  // inline
+      // onChange={(e) => setEmail(e.target.value) }  // inline
     />
    
   </div>
@@ -65,7 +65,7 @@ const [formData, setFormData] = useState ({
       type="password"
       className="form-control"
       id="password"
-      onChange={(e) => setPassword(e.target.value) } 
+      // onChange={(e) => setPassword(e.target.value) } 
     />
   </div>
   <div className="text-center"> 
