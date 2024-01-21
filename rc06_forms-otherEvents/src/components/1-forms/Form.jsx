@@ -11,12 +11,18 @@ const [password, setPassword] = useState ("")
 
 const handleUsername =(e) => {
   setUsername(e.target.value)
+
 }
+  const handleSubmit = (e) => {
+    console.log(e.target)
+    e.preventDefault()
+  }
+
 
   return <div className="container mt-4">
 
     <h2 className="text-center text-success">Forms In React</h2>
-  <form>
+  <form onSubmit={handleSubmit}>
 
   <div className="mb-3">
     <label htmlFor="username" className="form-label">
