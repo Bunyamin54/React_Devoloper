@@ -3,7 +3,7 @@ import { useState } from "react"
 
 const Form = () => {
 
-const [username, setUsername] = useState ("")
+const [username, setUsername] = useState ("deneme")
 
 
 
@@ -25,7 +25,11 @@ const handleUsername =(e) => {
       className="form-control"
       id="username"
       aria-describedby="emailHelp"
-      onChange={handleUsername}  // OnChange event i input degeri her degistiginde tetiklenir. 
+      onChange={handleUsername} 
+      value={username}
+      
+      
+      // OnChange event i input degeri her degistiginde tetiklenir. 
     />
    
   </div>
