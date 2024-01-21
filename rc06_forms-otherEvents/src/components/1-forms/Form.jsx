@@ -45,7 +45,7 @@ const handleUsername =(e) => {
       className="form-control"
       id="email"
       aria-describedby="emailHelp"
-      onChange={(e) => setEmail(e.target.value) }
+      onChange={(e) => setEmail(e.target.value) }  // inline
     />
    
   </div>
@@ -57,6 +57,7 @@ const handleUsername =(e) => {
       type="password"
       className="form-control"
       id="password"
+      onChange={(e) => setPassword(e.target.value) } 
     />
   </div>
   <div className="text-center"> 
