@@ -17,7 +17,7 @@ const KeyboardClipboard = () => {
 
  <div className="mt-4">
 <h3>Copied Content</h3>
-<p>{content}</p>
+<p>{content.toUpperCase()}</p>
 
  </div>
 
