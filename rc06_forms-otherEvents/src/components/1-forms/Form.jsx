@@ -1,44 +1,63 @@
+import { useState } from "react"
+
+
 const Form = () => {
 
+const [username, setUsername] = useState ("")
+
+
+
+const handleUsername =(e) => {
+  setUsername(e.target.value)
+}
 
   return <div className="container mt-4">
+
+    <h2 className="text-center text-success">Forms In React</h2>
   <form>
+
   <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" className="form-label">
+    <label htmlFor="username" className="form-label">
+      Hello, {username}
+    </label>
+    <input
+      type="email"
+      className="form-control"
+      id="username"
+      aria-describedby="emailHelp"
+      onChange={handleUsername}  // OnChange event i input degeri her degistiginde tetiklenir. 
+    />
+   
+  </div>
+
+  <div className="mb-3">
+    <label htmlFor="email" className="form-label">
       Email address
     </label>
     <input
       type="email"
       className="form-control"
-      id="exampleInputEmail1"
+      id="email"
       aria-describedby="emailHelp"
     />
-    <div id="emailHelp" className="form-text">
-      We'll never share your email with anyone else.
-    </div>
+   
   </div>
   <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" className="form-label">
+    <label htmlFor="password" className="form-label">
       Password
     </label>
     <input
       type="password"
       className="form-control"
-      id="exampleInputPassword1"
+      id="password"
     />
   </div>
-  <div className="mb-3 form-check">
-    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-    <label className="form-check-label" htmlFor="exampleCheck1">
-      Check me out
-    </label>
-  </div>
-  <button type="submit" className="btn btn-primary">
+  <div className="text-center"> 
+  <button type="submit" className="btn btn-success">
     Submit
   </button>
+  </div>
 </form>
-
-  
   </div>
 }
 
