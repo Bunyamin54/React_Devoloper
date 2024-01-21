@@ -3,9 +3,11 @@ import { useState } from "react"
 
 const Form = () => {
 
-const [username, setUsername] = useState ("deneme")
+const [username, setUsername] = useState ("")
 
+const [email, setEmail] = useState ("")
 
+const [password, setPassword] = useState ("")
 
 const handleUsername =(e) => {
   setUsername(e.target.value)
@@ -36,13 +38,14 @@ const handleUsername =(e) => {
 
   <div className="mb-3">
     <label htmlFor="email" className="form-label">
-      Email address
+      Email address: <span className="text-danger">{email}</span>
     </label>
     <input
       type="email"
       className="form-control"
       id="email"
       aria-describedby="emailHelp"
+      onChange={(e) => setEmail(e.target.value) }
     />
    
   </div>
