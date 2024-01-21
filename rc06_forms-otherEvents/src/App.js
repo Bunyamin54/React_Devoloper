@@ -1,17 +1,18 @@
-import Form from "./components/1-forms/Form"
-import FormObject from "./components/1-forms/FormObject"
-import KeyboardEvents from "./components/2-keyboardClipboardEvents/KeyboardClipboard"
-import MouseEvent from "./components/3-mouseEvents/MouseEvent"
+import Form from './components/1-forms/Form';
+import FormObject from './components/1-forms/FormObject';
+import KeyboardEvents
+  from './components/2-keyboardClipboardEvents/KeyboardClipboard';
+import MouseEvent from './components/3-mouseEvents/MouseEvent';
 
-function App() {
+function App () {
   return (
     <div>
-      {/* <Form /> */}
-      {/* <FormObject /> */}
+      <Form />
+      {/* <FormObject />
       {/* <KeyboardEvents /> */}
-      <MouseEvent />
+      {/* <MouseEvent /> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
