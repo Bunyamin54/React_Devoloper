@@ -14,6 +14,12 @@ const KeyboardClipboard = () => {
     console.log (e.target);
     // e.target.style.border = '3px solid red';
     e.target.className = 'form-control border border-danger border-4';
+    e.target.style.fontSize = '20px';
+  };
+
+  const handelCopy = e => {
+    alert ('Coping Illegal');
+    e.preventDefault ();
   };
   return (
     <div className="container mt-4">
@@ -33,7 +39,7 @@ const KeyboardClipboard = () => {
 
       <div className="mt-4">
         <h3>Copied Content</h3>
-        <p>{content.toLocaleLowerCase ()}</p>
+        <p onCopy={handelCopy}>{content.toLocaleLowerCase ()}</p>
       </div>
 
       <textarea
