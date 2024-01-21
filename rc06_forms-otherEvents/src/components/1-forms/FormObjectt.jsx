@@ -19,7 +19,9 @@ const [formData, setFormData] = useState ({
   }
 
 const handleFormData = (e) => {
-  console.log(e)
+  console.log(e.target.value)
+  console.log(e.target.name)
+  setFormData({...formData, [e.target.id]:e.target.value })
 }
   return <div className="container mt-4">
 
