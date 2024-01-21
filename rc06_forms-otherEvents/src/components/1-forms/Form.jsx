@@ -16,6 +16,10 @@ const handleUsername =(e) => {
   const handleSubmit = (e) => {
     console.log(e.target)
     e.preventDefault()
+
+    setEmail("")
+    setPassword("")
+    setUsername("")
   }
 
 
