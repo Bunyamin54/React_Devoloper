@@ -8,7 +8,7 @@ const ContainerCard = () => {
   return (
 
   <>
-      <Form.Control type="text" placeholder="Normal text" />
+      <Form.Control type="search" placeholder="Søk stjerner..." />
   </>
 
 
