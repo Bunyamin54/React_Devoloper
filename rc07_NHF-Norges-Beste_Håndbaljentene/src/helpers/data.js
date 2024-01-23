@@ -12,7 +12,7 @@ export const data = [
   },
 
   {
-    name: 'Cathrinei 	Roll-Matthiesen',
+    name: 'Cathrinei Roll-Matthiesen',
     img: 'https://gfx.nrk.no/_Mv-eBwSc2nVnQEwa-upzg84rkHETXLOUcrRG9QUoSyQ.jpg',
     statistics: ['233 Kamper', '918 Mål'],
   },

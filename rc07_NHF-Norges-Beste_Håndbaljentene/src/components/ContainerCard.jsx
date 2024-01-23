@@ -27,8 +27,8 @@ const ContainerCard = () => {
   <>
       <Form.Control type="search" placeholder="Søk stjerner..." onChange={handleChange} />
 
-      <Container className='p-3 rounded-4 card-container my-3 '>
-      <Row xs={1} sm={2} md={3} lg={4} className='justify-content-center'>
+      <Container className='p-3 rounded-4 card-container my-3'>
+      <Row xs={1} sm={2} md={3} lg={4} className='justify-content-center g-3'>
        
         
         {/* {filteredData.map((player,i) => 

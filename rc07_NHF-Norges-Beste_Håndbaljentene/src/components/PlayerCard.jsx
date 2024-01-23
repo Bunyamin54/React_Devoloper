@@ -13,7 +13,7 @@ const PlayerCard = ({name, img, statistics}) => {
               variant="top"
               src={img}
               height="350px"
-              onClick={() => setShowImage (false)}
+              // onClick={() => setShowImage (false)}
             />
           ) : (<ul className='m-auto'
           //  onClick={() => setShowImage (true)}
