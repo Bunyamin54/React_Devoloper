@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState } from 'react';
 import {data} from "../helpers/data"
+import PlayerCard from './PlayerCard';
 
 
 
@@ -31,7 +32,11 @@ const ContainerCard = () => {
       <Row xs={2} md={4} lg={6} className='justify-content-center'>
        
         <Col>1 of 2</Col>
-        
+        {/* {filteredData.map((player,i) => 
+        <PlayerCard key={i} player = {player} img={player.img} name={player.name} statistics= {player.statistics} /> )} */}
+
+{filteredData.map((player,i) => 
+        <PlayerCard key={i} {...player} /> )}
       </Row>
      
     </Container>
