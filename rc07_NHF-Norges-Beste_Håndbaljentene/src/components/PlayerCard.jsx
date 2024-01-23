@@ -9,20 +9,20 @@ const PlayerCard = ({name, img, statistics}) => {
     <Col>
       <Card>
         {showImage
-          ? <Card.Img
+          ?( <Card.Img
               variant="top"
               src={img}
               height="350px"
               onClick={() => setShowImage (false)}
             />
-          : <ul>
+          ) : (<ul onClick={() => setShowImage (true)}>
               {statistics.map ((item, i) => (
                 <li className="list-unstyled h5 text-start" key={i}>
                   {' '}
                   ⚽🤾‍♀️ {item}
                 </li>
               ))}
-            </ul>}
+            </ul>)}
 
         <Card.Footer>
           <Card.Title>{name}</Card.Title>
