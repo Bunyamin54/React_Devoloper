@@ -7,10 +7,10 @@ const PlayerCard = ({name, img, statistic}) => {
     <Col>
 
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" src={img} />
 
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <Card.Title>Card title</Card.Title>
         </Card.Footer>
       </Card>
 
