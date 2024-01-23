@@ -13,8 +13,8 @@ body {
 .card-container {
 
 
-
-
-  
-
+ background-image: url("./assets/Screenshot\ 2024-01-22\ 231714.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 400px;
 }
