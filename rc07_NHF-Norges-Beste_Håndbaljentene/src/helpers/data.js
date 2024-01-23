@@ -7,7 +7,7 @@ export const data = [
 
   {
     name: 'Linn-Kristin Riegelhuth Koren',
-    img: 'https://premium.vgc.no/v2/images/d2c61556-143f-4c89-92d4-7b771cfb2ae2?fit=crop&format=auto&h=1425&tight=true&w=800&s=f2815b3e1ada13df9ea7ba5ab43730d66fc592d9',
+    img: 'https://premium.vgc.no/v2/images/d2c61556-143f-4c89-92d4-7b771cfb2ae2?fit=crop&format=auto&h=1425&tight=true&w=1900&s=f2815b3e1ada13df9ea7ba5ab43730d66fc592d9',
     statistics: ['279 Kamper', '971 Mål'],
   },
 

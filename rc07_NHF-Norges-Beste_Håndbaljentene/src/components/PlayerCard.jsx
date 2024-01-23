@@ -10,7 +10,7 @@ const PlayerCard = ({name, img, statistic}) => {
         <Card.Img variant="top" src={img} />
 
         <Card.Footer>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>{name}</Card.Title>
         </Card.Footer>
       </Card>
 
