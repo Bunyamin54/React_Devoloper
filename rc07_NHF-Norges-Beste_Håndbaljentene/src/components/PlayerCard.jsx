@@ -7,7 +7,7 @@ const PlayerCard = ({name, img, statistics}) => {
 
   return (
     <Col>
-      <Card onClick={()=> setShowImage(!showImage)}>
+      <Card onClick={()=> setShowImage(!showImage)}  className='player-card' role="button">
         {showImage
           ?( <Card.Img
               variant="top"
