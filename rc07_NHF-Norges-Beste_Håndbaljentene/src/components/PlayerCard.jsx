@@ -7,7 +7,7 @@ const PlayerCard = ({name, img, statistic}) => {
     <Col>
 
       <Card>
-        <Card.Img variant="top" src={img} />
+        <Card.Img variant="top" src={img} height="350px" />
 
         <Card.Footer>
           <Card.Title>{name}</Card.Title>
