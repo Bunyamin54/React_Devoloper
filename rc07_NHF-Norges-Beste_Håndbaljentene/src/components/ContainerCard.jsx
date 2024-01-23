@@ -29,9 +29,9 @@ const ContainerCard = () => {
 
       <Container className='p-3 rounded-4 card-container my-3 '>
       <Row xs={2} md={4} lg={6} className='justify-content-center'>
+       
         <Col>1 of 2</Col>
-        <Col>2 of 2</Col>
-        <Col>3 of 3</Col>
+        
       </Row>
      
     </Container>
