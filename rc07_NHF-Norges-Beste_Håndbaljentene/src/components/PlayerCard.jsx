@@ -7,7 +7,7 @@ const PlayerCard = ({name, img, statistics}) => {
 
   return (
     <Col>
-      <Card>
+      <Card onClick={()=> setShowImage(!showImage)}>
         {showImage
           ?( <Card.Img
               variant="top"
@@ -15,7 +15,9 @@ const PlayerCard = ({name, img, statistics}) => {
               height="350px"
               onClick={() => setShowImage (false)}
             />
-          ) : (<ul onClick={() => setShowImage (true)}>
+          ) : (<ul
+          //  onClick={() => setShowImage (true)}
+           >
               {statistics.map ((item, i) => (
                 <li className="list-unstyled h5 text-start" key={i}>
                   {' '}
