@@ -10,6 +10,7 @@ function AddModal({show ,handleClose}) {
   const handleSubmit =(e) =>{
     
    e.preventDefault()
+   handleClose()
   }
   return (
     <>
