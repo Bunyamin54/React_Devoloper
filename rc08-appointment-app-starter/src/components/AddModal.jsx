@@ -7,7 +7,7 @@ import { useState } from 'react';
 function AddModal({show ,handleClose}) {
   const [name, setName] = useState()
   const [date, setDate] = useState()
-  
+
   return (
     <>
      
@@ -21,13 +21,13 @@ function AddModal({show ,handleClose}) {
       <Form.Group className="mb-3" controlId="tjeneste">
         <Form.Label >Tjenestebruker </Form.Label>
         <Form.Control type="text" placeholder="enter name"
-         onChange={(e) => setName(e.target.value)} />
+         onChange={(e) => setName(e.target.value)} value={name} />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="date">
         <Form.Label>Dato & Time</Form.Label>
         <Form.Control type="date" placeholder="Date" 
-         onChange={(e) => setDate(e.target.value)}
+         onChange={(e) => setDate(e.target.value)} value={date}
         />
       </Form.Group>
 
