@@ -16,37 +16,31 @@ function AddModal({show ,handleClose}) {
         <Modal.Body>
 
         <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
+      <Form.Group className="mb-3" controlId="tjeneste">
+        <Form.Label>Tjenestebruker </Form.Label>
+        <Form.Control type="text" placeholder="Enter name" />
+    
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+      <Form.Group className="mb-3" controlId="date">
+        <Form.Label>Dato & Time</Form.Label>
+        <Form.Control type="date" placeholder="Date" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
+
+      
+      <div>
       <Button variant="primary" type="submit">
-        Submit
+        Send
       </Button>
+
+      <Button variant="secondary" onClick={handleClose}>
+            Lukk
+          </Button>
+        
+      </div>
+    
     </Form>
-
-
-
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );
