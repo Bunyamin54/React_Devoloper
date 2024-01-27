@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container"
 import {aktivitetData}  from "../helper/data"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Row"
+import AddModal from "./AddModal"
 
 
 const FrivilligArbeid = () => {
@@ -22,6 +23,7 @@ const FrivilligArbeid = () => {
      </Col>
    ) )}
     </Row>
+    <AddModal/>
     </Container>
   )
 }
