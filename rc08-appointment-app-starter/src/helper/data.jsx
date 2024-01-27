@@ -1,24 +1,24 @@
 export const bestillingData = [
   {
     id: 1,
-    Tjenestebruker: "",
+    Tjenestebruker: "Snøhjelpen",
     dag: new Date().toISOString().slice(0,10),
     konsultert: true,
-    Tjeneste: "",
+    Tjeneste: "Eldres Snøryddere",
   },
   {
     id: 2,
-    Tjenestebruker: "",
+    Tjenestebruker: "Koselig Sommer",
     dag: new Date().toISOString().slice(0,10),
     konsultert: false,
-    Tjeneste: "",
+    Tjeneste: "Livet på Havet",
   },
   {
     id: 3,
-    Tjenestebruker: "",
+    Tjenestebruker: "Mattlevering",
     dag: new Date().toISOString().slice(0,10),
     konsultert: true,
-    Tjeneste: "",
+    Tjeneste: "MatPåDøren",
   },
 ]
 

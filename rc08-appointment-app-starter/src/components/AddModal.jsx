@@ -4,12 +4,21 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 
-function AddModal({show ,handleClose, apps, setApps}) {
+function AddModal({show ,handleClose, apps, setApps, tjenesteName}) {
   const [name, setName] = useState("")
   const [date, setDate] = useState(new Date().toISOString().slice(0,10))
   const handleSubmit =(e) =>{
     
    e.preventDefault()
+   setApps([...apps, 
+    {
+    id:apps.lenght+1,
+    Tjenestebruker:name,
+    dag:date,
+    konsultert:false,
+    Tjeneste:tjenesteName,
+   }])
+
    handleClose()
   }
   return (
@@ -17,7 +26,7 @@ function AddModal({show ,handleClose, apps, setApps}) {
      
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Bestilling for ...</Modal.Title>
+          <Modal.Title>Bestilling for{tjenesteName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 

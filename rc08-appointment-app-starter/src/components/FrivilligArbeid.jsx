@@ -8,6 +8,7 @@ import { useState } from 'react';
 const FrivilligArbeid = ({apps,setApps}) => {
 
   const [show, setShow] = useState(false);
+  const [tjenesteName, setTjenesteName] = useState("");
 
    const handelImgClick = ()=> {
 
@@ -27,7 +28,11 @@ const FrivilligArbeid = ({apps,setApps}) => {
               src={img}
               alt={name}
               className="img-thumbnail frivillig-img"
-              onClick={handelImgClick}
+              onClick={() => {
+
+                setTjenesteName(name)
+                setShow(true)
+              }}
             />
             <h5>{name}</h5>
             <h6>{dep}</h6>
@@ -35,7 +40,7 @@ const FrivilligArbeid = ({apps,setApps}) => {
         ))}
       </Row>
       <AddModal show={show}  handleClose={()=> setShow(false)} 
-      apps={apps} setApps={setApps}/>
+      apps={apps} setApps={setApps} TjenesteName= {tjenesteName}/>
     </Container>
   );
 };
