@@ -27,9 +27,9 @@ function AddModal({show ,handleClose}) {
         <Form.Control type="date" placeholder="Date" />
       </Form.Group>
 
-      
-      <div>
-      <Button variant="primary" type="submit">
+
+      <div className='text-center'>
+      <Button variant="primary" type="submit" className='me-2' >
         Send
       </Button>
 
