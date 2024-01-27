@@ -10,19 +10,23 @@ const BestillingList = ({apps}) => {
       BestillingList 
       </h3>
 
-   <div>
+
+    
+    {apps.map(({id,Tjenestebruker,dag,konsultert,Tjeneste })=> (
+    
+    <div key={id}>
 
     <Row>
+    <Col>
+      <h4>{Tjenestebruker} </h4>
+      <h4>{Tjeneste}</h4>  </Col>
 
-      <Col>
-      <h4>Tjenestebruker Name</h4>
-      <h4>Tjeneste</h4>  </Col>
-
-      <Col> <h4>Dato:</h4> </Col>
-      <Col> <h4>Icon</h4> </Col>
+      <Col> <h4>{dag}</h4> </Col>
+      <Col> <h4>{Icon}</h4> </Col>
 
     </Row>
-   </div>
+    </div> ))}
+      
 
 
 

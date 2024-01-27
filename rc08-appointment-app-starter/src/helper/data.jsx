@@ -1,24 +1,24 @@
 export const bestillingData = [
   {
     id: 1,
-    patient: "Barry Vermont",
-    day: new Date(),
-    consulted: true,
-    doctor: "Dr. Hazel Valery",
+    Tjenestebruker: "",
+    dag: new Date().toISOString().slice(0,10),
+    konsultert: true,
+    Tjeneste: "",
   },
   {
     id: 2,
-    patient: "Harry Coming",
-    day: new Date(),
-    consulted: false,
-    doctor: "Dr. Jessica White",
+    Tjenestebruker: "",
+    dag: new Date().toISOString().slicet(0,10),
+    konsultert: false,
+    Tjeneste: "",
   },
   {
     id: 3,
-    patient: "Aaron Black",
-    day: new Date(),
-    consulted: true,
-    doctor: "Dr. Jasmine Carpanter",
+    Tjenestebruker: "",
+    dag: new Date().toISOString().slice(0,10),
+    konsultert: true,
+    Tjeneste: "",
   },
 ]
 
