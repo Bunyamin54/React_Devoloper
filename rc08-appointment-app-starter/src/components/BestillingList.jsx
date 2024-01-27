@@ -1,7 +1,8 @@
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/esm/Col"
 import Row from "react-bootstrap/esm/Row"
-
+import { RiDeleteBin6Line } from "react-icons/ri";
+ 
 const BestillingList = ({apps}) => {
   
   return (
@@ -14,15 +15,15 @@ const BestillingList = ({apps}) => {
     
     {apps.map(({id,Tjenestebruker,dag,konsultert,Tjeneste })=> (
     
-    <div key={id}>
+    <div key={id} className={konsultert ?"bestillings konsultert" :"bestillings"}>
 
-    <Row>
-    <Col>
+    <Row className="justify-content-between">
+    <Col xs={12} sm={6} md={4} xl={3} >
       <h4>{Tjenestebruker} </h4>
       <h4>{Tjeneste}</h4>  </Col>
 
       <Col> <h4>{dag}</h4> </Col>
-      <Col> <h4>{Icon}</h4> </Col>
+      <Col className="text-end"> <RiDeleteBin6Line className="text-danger fs-4"/> </Col>
 
     </Row>
     </div> ))}

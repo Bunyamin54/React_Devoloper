@@ -9,7 +9,7 @@ export const bestillingData = [
   {
     id: 2,
     Tjenestebruker: "",
-    dag: new Date().toISOString().slicet(0,10),
+    dag: new Date().toISOString().slice(0,10),
     konsultert: false,
     Tjeneste: "",
   },
