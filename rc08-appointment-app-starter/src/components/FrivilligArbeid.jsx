@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Row';
 import AddModal from './AddModal';
 import { useState } from 'react';
 
-const FrivilligArbeid = () => {
+const FrivilligArbeid = ({apps,setApps}) => {
 
   const [show, setShow] = useState(false);
 
@@ -34,7 +34,8 @@ const FrivilligArbeid = () => {
           </Col>
         ))}
       </Row>
-      <AddModal show={show}  handleClose={()=> setShow(false) }/>
+      <AddModal show={show}  handleClose={()=> setShow(false)} 
+      apps={apps} setApps={setApps}/>
     </Container>
   );
 };
