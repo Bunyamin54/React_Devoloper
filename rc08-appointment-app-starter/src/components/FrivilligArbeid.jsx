@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import {aktivitetData} from '../helper/data';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import AddModal from './AddModal';
 import { useState } from 'react';
 
@@ -17,13 +17,13 @@ const FrivilligArbeid = ({apps,setApps}) => {
    }
   return (
     <Container className="p-2">
-      <h3 className="display-6 mb-3" style={{color: 'rgb(166, 18, 189)'}}>
+      <h3 className="display-7 mb-3" style={{color: 'rgb(8, 217, 74)'}}>
         Vår Hjelpsom Harmoni
       </h3>
 
-      <Row className='justify-content-center'>
+      <Row className="justify-content-center">
         {aktivitetData.map (({id, img, dep, name}) => (
-          <Col xs={12} sm={6} md={4} xl={3} key={id}>
+          <Col xs={12} sm={6} md={6} xl={4} key={id}>
             <img
               src={img}
               alt={name}
