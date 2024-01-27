@@ -1,11 +1,11 @@
-import AppointmentList from "../components/AppointmentList"
-import Doctors from "../components/FrivilligArbeid"
+import BestillingList from "../components/BestillingList"
+import FrivilligArbeid from "../components/FrivilligArbeid"
 
 const Home = () => {
   return (
     <main className="text-center mt-2">
-      <h1 className="display-9 text-danger">HjerteHender</h1>
-      <Doctors />
+      <h1 className="display-9 text-danger">Hjerte Hender</h1>
+      <FrivilligArbeid/>
       <BestillingList />
     </main>
   )

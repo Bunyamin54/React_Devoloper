@@ -10,4 +10,4 @@ const FrivilligArbeid = () => {
   )
 }
 
-export default Doctors
+export default FrivilligArbeid

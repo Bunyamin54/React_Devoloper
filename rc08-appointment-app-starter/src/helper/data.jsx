@@ -1,4 +1,4 @@
-export const appointmentData = [
+export const bestillingData = [
   {
     id: 1,
     patient: "Barry Vermont",
