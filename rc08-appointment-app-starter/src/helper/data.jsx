@@ -61,7 +61,7 @@ export const aktivitetData = [
   },
   {
     id: 7,
-    name: "kultur Kobling",
+    name: "Kultur Kobling",
     dep: "FritidsFest",
     img: "./img/kultur kobling.webp",
   },
