@@ -15,11 +15,14 @@ function AddModal({show ,handleClose}) {
         </Modal.Header>
         <Modal.Body>
 
-        <Form>
+        <Form >
       <Form.Group className="mb-3" controlId="tjeneste">
-        <Form.Label>Tjenestebruker </Form.Label>
-        <Form.Control type="text" placeholder="Enter name" />
-    
+        <Form.Label >Tjenestebruker </Form.Label>
+        <Form.Control type="text" placeholder="enter name" />
+
+        <Form.Control  type="text" placeholder="enter telefon" />
+
+        <Form.Control  type="text" placeholder="enter adresse" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="date">
