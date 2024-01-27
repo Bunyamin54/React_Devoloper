@@ -2,10 +2,13 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import { useState } from 'react';
 
 function AddModal({show ,handleClose}) {
+  const [name, setName] = useState()
+  const [date, setDate] = useState()
 
-
+  console.log(name,date)
   return (
     <>
      
@@ -18,16 +21,15 @@ function AddModal({show ,handleClose}) {
         <Form >
       <Form.Group className="mb-3" controlId="tjeneste">
         <Form.Label >Tjenestebruker </Form.Label>
-        <Form.Control type="text" placeholder="enter name" />
-
-        <Form.Control  type="text" placeholder="enter telefon" />
-
-        <Form.Control  type="text" placeholder="enter adresse" />
+        <Form.Control type="text" placeholder="enter name"
+         onChange={(e) => setName(e.target.value)} />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="date">
         <Form.Label>Dato & Time</Form.Label>
-        <Form.Control type="date" placeholder="Date" />
+        <Form.Control type="date" placeholder="Date" 
+         onChange={(e) => setDate(e.target.value)}
+        />
       </Form.Group>
 
 
