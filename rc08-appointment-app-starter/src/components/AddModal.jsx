@@ -7,8 +7,7 @@ import { useState } from 'react';
 function AddModal({show ,handleClose}) {
   const [name, setName] = useState()
   const [date, setDate] = useState()
-
-  console.log(name,date)
+  
   return (
     <>
      
