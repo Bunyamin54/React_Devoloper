@@ -43,7 +43,7 @@ export const aktivitetData = [
   },
   {
     id: 4,
-    name: "",
+    name: "HageHelten",
     dep: "Grønn hjelp",
     img: "./img/grønn hjelp.jpg",
   },
