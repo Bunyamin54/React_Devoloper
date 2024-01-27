@@ -3,11 +3,17 @@ import Col from "react-bootstrap/esm/Col"
 import Row from "react-bootstrap/esm/Row"
 import { RiDeleteBin6Line } from "react-icons/ri";
  
-const BestillingList = ({apps}) => {
+const BestillingList = ({apps,setApps}) => {
   
+
+const handleDelete =(id) => {
+
+  setApps()
+
+}
   return (
     <Container className="p-2">
-      <h3 className="display-6 mb-2" style={{ color: "rgb(166, 18, 189)" }}>
+      <h3 className="display-7 mb-2" style={{ color: "rgb(171, 15, 171)" }}>
       BestillingList 
       </h3>
 
@@ -23,7 +29,7 @@ const BestillingList = ({apps}) => {
       <h4>{Tjeneste}</h4>  </Col>
 
       <Col> <h4>{dag}</h4> </Col>
-      <Col className="text-end"> <RiDeleteBin6Line className="text-danger fs-4"/> </Col>
+      <Col className="text-end"> <RiDeleteBin6Line className="text-danger fs-4"type="button"  onClick={() => handleDelete(id)}/> </Col>
 
     </Row>
     </div> ))}
