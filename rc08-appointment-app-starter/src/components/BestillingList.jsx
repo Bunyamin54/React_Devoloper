@@ -17,7 +17,7 @@ const BestillingList = ({apps}) => {
     
     <div key={id} className={konsultert ?"bestillings konsultert" :"bestillings"}>
 
-    <Row className="justify-content-between">
+    <Row className="justify-content-between align-items-center">
     <Col xs={12} sm={6} md={4} xl={3} >
       <h4>{Tjenestebruker} </h4>
       <h4>{Tjeneste}</h4>  </Col>
