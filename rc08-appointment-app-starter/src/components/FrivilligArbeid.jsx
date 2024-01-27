@@ -20,10 +20,10 @@ const FrivilligArbeid = ({apps,setApps}) => {
       <h3 className="display-7 mb-3" style={{color: 'rgb(8, 217, 74)'}}>
         Vår Hjelpsom Harmoni
       </h3>
-
+  
       <Row className="justify-content-center">
         {aktivitetData.map (({id, img, dep, name}) => (
-          <Col xs={12} sm={6} md={6} xl={4} key={id}>
+          <Col xs={12} sm={6} md={4} xl={3} key={id}>
             <img
               src={img}
               alt={name}

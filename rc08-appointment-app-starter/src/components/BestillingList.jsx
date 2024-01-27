@@ -8,7 +8,7 @@ const BestillingList = ({apps,setApps}) => {
 
 const handleDelete =(id) => {
 
-  setApps()
+  setApps(apps.filter(( item) => item.id !== id ))
 
 }
   return (
@@ -17,7 +17,7 @@ const handleDelete =(id) => {
       BestillingList 
       </h3>
 
-
+    {apps.length < 1 && <img src="./img/appointment.jpg" width="70%"/>}
     
     {apps.map(({id,Tjenestebruker,dag,konsultert,Tjeneste })=> (
     
@@ -28,8 +28,8 @@ const handleDelete =(id) => {
       <h4>{Tjenestebruker} </h4>
       <h4>{Tjeneste}</h4>  </Col>
 
-      <Col> <h4>{dag}</h4> </Col>
-      <Col className="text-end"> <RiDeleteBin6Line className="text-danger fs-4"type="button"  onClick={() => handleDelete(id)}/> </Col>
+      <Col className="tex
+      <Col> <h4>{dag}</h4> </Col>t-end"> <RiDeleteBin6Line className="text-danger fs-4"type="button"  onClick={() => handleDelete(id)}/> </Col>
 
     </Row>
     </div> ))}

@@ -12,7 +12,7 @@ function AddModal({show ,handleClose, apps, setApps, tjenesteName}) {
    e.preventDefault()
    setApps([...apps, 
     {
-    id:apps.lenght+1,
+    id:new Date ().getTime(),
     Tjenestebruker:name,
     dag:date,
     konsultert:false,
