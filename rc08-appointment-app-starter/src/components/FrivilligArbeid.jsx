@@ -20,9 +20,9 @@ const FrivilligArbeid = () => {
         Vår Hjelpsom Harmoni
       </h3>
 
-      <Row>
+      <Row className='justify-content-center'>
         {aktivitetData.map (({id, img, dep, name}) => (
-          <Col xs={12} sm={6} md={4} xl={3}>
+          <Col xs={12} sm={6} md={4} xl={3} key={id}>
             <img
               src={img}
               alt={name}
