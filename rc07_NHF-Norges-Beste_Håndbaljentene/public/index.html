@@ -23,11 +23,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>NHF Norges Beste Håndbaljentene</title>
+
+  <style>
+    /* Buton için CSS stilleri */
+    #titleButton {
+      position: fixed; /* Sabit pozisyon */
+      top: 10px; /* Üstten boşluk */
+      right: 10px; /* Sağdan boşluk */
+      z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
+    }
+  </style>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+
+  <titleButton id="playButton">Spill mussik</titleButton>
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,12 +52,28 @@
 
       
     -->
-    <audio autoplay loop>
-      <source src="../src/assets/Gjenopplev EM-finalen slik vår kunst-redigerer så den.mp3" type="audio/mpeg">
-      Tarayıcınız bu ses dosyasını desteklemiyor.
-    </audio>
-    
-    
+
+  <!-- Müzik dosyası -->
+  <audio id="backgroundMusic" loop>
+    <source src="Gjenopplev EM-finalen slik vår kunst-redigerer så den.mp3" type="audio/mpeg">
+    Tarayıcınız bu ses dosyasını desteklemiyor.
+  </audio>
+
+  <!-- Oynatma butonu -->
+
+
+  <!-- JavaScript -->
+  <script>
+    // Butona tıklandığında müziği oynat
+    document.getElementById('playButton').addEventListener('click', function() {
+      var audio = document.getElementById('backgroundMusic');
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
 </body>
 
 </html>
