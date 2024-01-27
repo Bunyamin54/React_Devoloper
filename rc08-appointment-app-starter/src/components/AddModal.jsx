@@ -7,7 +7,10 @@ import { useState } from 'react';
 function AddModal({show ,handleClose}) {
   const [name, setName] = useState("")
   const [date, setDate] = useState(new Date().toISOString().slice(0,10))
-
+  const handleSubmit =(e) =>{
+    
+   e.preventeDefault()
+  }
   return (
     <>
      
@@ -17,7 +20,7 @@ function AddModal({show ,handleClose}) {
         </Modal.Header>
         <Modal.Body>
 
-        <Form >
+        <Form onSubmit={handleSubmit} >
       <Form.Group className="mb-3" controlId="tjeneste">
         <Form.Label >Tjenestebruker </Form.Label>
         <Form.Control type="text" placeholder="enter name"
