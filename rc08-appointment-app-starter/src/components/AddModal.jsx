@@ -29,11 +29,11 @@ function AddModal({show ,handleClose}) {
 
 
       <div className='text-center'>
-      <Button variant="primary" type="submit" className='me-2' >
-        Send
+      <Button variant="success" type="submit" className='me-2' >
+        Lagre
       </Button>
 
-      <Button variant="secondary" onClick={handleClose}>
+      <Button variant="danger" onClick={handleClose}>
             Lukk
           </Button>
         
