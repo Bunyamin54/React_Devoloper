@@ -1,12 +1,12 @@
 import AppointmentList from "../components/AppointmentList"
-import Doctors from "../components/Doctors"
+import Doctors from "../components/FrivilligArbeid"
 
 const Home = () => {
   return (
     <main className="text-center mt-2">
-      <h1 className="display-9 text-danger">CLARUS HOSPITAL</h1>
+      <h1 className="display-9 text-danger">HjerteHender</h1>
       <Doctors />
-      <AppointmentList />
+      <BestillingList />
     </main>
   )
 }
