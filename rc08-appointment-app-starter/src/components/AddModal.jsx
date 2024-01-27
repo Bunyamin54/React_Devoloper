@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 
 function AddModal({show ,handleClose}) {
-  const [name, setName] = useState()
+  const [name, setName] = useState("")
   const [date, setDate] = useState(new Date().toISOString().slice(0,10))
 
   return (
