@@ -12,13 +12,13 @@ function AddModal({show ,handleClose, apps, setApps, tjenesteName}) {
    e.preventDefault()
    setApps([...apps, 
     {
-    id:new Date ().getTime(),
+    id:new Date().getTime(),
     Tjenestebruker:name,
     dag:date,
     konsultert:false,
     Tjeneste:tjenesteName,
    }])
-
+  setName("")
    handleClose()
   }
   return (
@@ -31,16 +31,16 @@ function AddModal({show ,handleClose, apps, setApps, tjenesteName}) {
         <Modal.Body>
 
         <Form onSubmit={handleSubmit} >
-      <Form.Group className="mb-3" controlId="tjeneste">
+      <Form.Group className="mb-3" controlId="name">
         <Form.Label >Tjenestebruker </Form.Label>
         <Form.Control type="text" placeholder="enter name"
-         onChange={(e) => setName(e.target.value)} value={name} />
+         onChange={(e) => setName(e.target.value)} value={name}  required/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="date">
         <Form.Label>Dato & Time</Form.Label>
         <Form.Control type="date" placeholder="Date" 
-         onChange={(e) => setDate(e.target.value)} value={date}
+         onChange={(e) => setDate(e.target.value)} value={date} required
         />
       </Form.Group>
 
