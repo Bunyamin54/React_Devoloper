@@ -14,7 +14,13 @@ const handleDelete =(id) => {
 
 
  const handleDoubleClick = (id) => {
-  setApps (apps.map( (item) => item.id == id ?  {...item, konsultert: !item.konsultert} :item ) )
+  setApps (
+    apps.map((item) => 
+    item.id === id ?  { ...item, konsultert: !item.konsultert} : item
+    
+    ) 
+     
+    )
 
  }
   return (

@@ -10,11 +10,7 @@ const FrivilligArbeid = ({apps,setApps}) => {
   const [show, setShow] = useState(false);
   const [tjenesteName, setTjenesteName] = useState("");
 
-   const handelImgClick = ()=> {
-
-    setShow(true)
-
-   }
+   
   return (
     <Container className="p-2">
       <h3 className="display-7 mb-3" style={{color: 'rgb(8, 217, 74)'}}>

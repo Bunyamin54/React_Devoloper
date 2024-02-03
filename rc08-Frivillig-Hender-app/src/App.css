@@ -7,7 +7,7 @@
 }
 .frivillig-img:hover {
   transform: scale(1.05);
-  border: 2px solid red;
+  border: 2px solid rgb(131, 220, 15);
   cursor: pointer;
 }
 
