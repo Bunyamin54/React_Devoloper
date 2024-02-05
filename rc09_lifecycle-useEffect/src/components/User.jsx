@@ -3,12 +3,12 @@ import React, {useState} from 'react';
 const User = () => {
   // let userData ="deneme"  //! global degiskene aktariyoruz bu sekilde degisken yazarak
 
-  const [userData, setUserData] = useState ('');
+  const [userData, setUserData] = useState ();
 
   const getUser = () => {
     fetch ('https://randomuser.me/api/') // ! istek atiyoruz  yeniden render olmasi icin state yapmaliyiz
       .then (res => res.json ()) //! veriyi jsonlastiryoruz
-      .then (data => setUserData(data.results[0])) //! catch blogu atip error de verdirebilriz
+      .then (data => setUserData (data.results[0])) //! catch blogu atip error de verdirebilriz
       .catch (err => console.log (err));
   };
 
@@ -16,13 +16,12 @@ const User = () => {
   return (
     // ? Klasik fetch yapisi
 
-    (
+    
       <div>
-
-        <img src="" alt="" />
-
+      {/*  optional chaining ile erisim ? */}
+        <img src={userData?.picture?.large} className='rounded-circle'    alt="" /> 
         <h4>Hei, My Name is</h4>
-        <h1>Name</h1>
+        <h1>{userData?.name?.first}  {userData?.name?.last} </h1>
         <h3>Email</h3>
         <h4>dob</h4>
         <h5>phone</h5>
@@ -33,7 +32,7 @@ const User = () => {
         </button>
 
       </div>
-    )
+    
   );
 };
 
