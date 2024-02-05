@@ -1,39 +1,39 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 const User = () => {
   // let userData ="deneme"  //! global degiskene aktariyoruz bu sekilde degisken yazarak
 
-  const [userData, setUserData] = useState("")
+  const [userData, setUserData] = useState ('');
 
-  const getUser =() => {
+  const getUser = () => {
     fetch ('https://randomuser.me/api/') // ! istek atiyoruz  yeniden render olmasi icin state yapmaliyiz
-    .then (res => res.json ()) //! veriyi jsonlastiryoruz
-    .then (data => setUserData(data)) //! catch blogu atip error de verdirebilriz
-    .catch (err => console.log (err));
-  }
+      .then (res => res.json ()) //! veriyi jsonlastiryoruz
+      .then (data => setUserData(data.results[0])) //! catch blogu atip error de verdirebilriz
+      .catch (err => console.log (err));
+  };
 
-  console.log(userData)
-return (
-
-
-
+  console.log (userData);
+  return (
     // ? Klasik fetch yapisi
 
-    
-    <div>
+    (
+      <div>
 
-      <img src="" alt="" />
+        <img src="" alt="" />
 
-      <h4>Hei, My Name is</h4>
-      <h1>Name</h1>
-      <h3>Email</h3>
-      <h4>dob</h4>
-      <h5>phone</h5>
-      <h6>address</h6>
+        <h4>Hei, My Name is</h4>
+        <h1>Name</h1>
+        <h3>Email</h3>
+        <h4>dob</h4>
+        <h5>phone</h5>
+        <h6>address</h6>
 
-      <button className='btn btn-success'  onClick={getUser}> Get Random User</button>
+        <button className="btn btn-success" onClick={getUser}>
+          {' '}Get Random User
+        </button>
 
-    </div>
+      </div>
+    )
   );
 };
 
