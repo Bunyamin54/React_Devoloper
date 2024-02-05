@@ -11,7 +11,12 @@ const User = () => {
       .then (data => setUserData (data.results[0])) //! catch blogu atip error de verdirebilriz
       .catch (err => console.log (err));
   };
-
+          useEffect(() => {
+            first
+          
+            
+          }, [])
+ 
   console.log (userData);
   return (
     // ? Klasik fetch yapisi
