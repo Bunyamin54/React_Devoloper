@@ -3,9 +3,16 @@ import React from 'react'
 const User = () => {
   return (
     <div>
+     
+      <img src="" alt="" />
+
+       <h4>Hei , My Name is</h4>
+      <h1>Name</h1>
+      <h3>Email</h3>
+      <h4>dob</h4>
+      <h5>phone</h5>
 
 
-      
       User
 
 
