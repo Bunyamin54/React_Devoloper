@@ -12,6 +12,13 @@ const User = () => {
       .catch (err => console.log (err));
   };
           useEffect(() => {
+            
+          const timer = setInterval(getUser, 3000)
+            return () => {
+         clearInterval(timer)
+
+            }
+            
             getUser()
           
             
