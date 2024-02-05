@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const User = () => {
+  // let userData ="deneme"  //! global degiskene aktariyoruz bu sekilde degisken yazarak
 
+  const [userData, setUserData] = useState("")
+    // ? Klasik fetch yapisi
 
-  let userData ="deneme"  //! global degiskene aktariyoruz bu sekilde degisken yazarak
-   // ? Klasik fetch yapisi
-
-  fetch ('https://randomuser.me/api/') // ! istek atiyoruz
-    .then (res => res.json ()) //! veriyi jsonlastiryoruz
-    .then (data => console.log (userData=data))  //! catch blogu atip error de verdirebilriz
-    .catch (err => console.log (err));
-  console.log(userData)
+    fetch ('https://randomuser.me/api/') // ! istek atiyoruz  yeniden render olmasi icin state yapmaliyiz
+      .then (res => res.json ()) //! veriyi jsonlastiryoruz
+      .then (data => console.log ((userData = data))) //! catch blogu atip error de verdirebilriz
+      .catch (err => console.log (err));
+  console.log (userData);
   return (
     <div>
 
