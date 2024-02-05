@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 
 const User = () => {
   // let userData ="deneme"  //! global degiskene aktariyoruz bu sekilde degisken yazarak
@@ -12,7 +12,7 @@ const User = () => {
       .catch (err => console.log (err));
   };
           useEffect(() => {
-            first
+            getUser()
           
             
           }, [])
