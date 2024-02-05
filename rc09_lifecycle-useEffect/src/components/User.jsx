@@ -3,14 +3,14 @@ import React from 'react';
 const User = () => {
 
 
-  let userData =""  //! global degiskene aktariyoruz bu sekilde degisken yazarak
+  let userData ="deneme"  //! global degiskene aktariyoruz bu sekilde degisken yazarak
    // ? Klasik fetch yapisi
 
   fetch ('https://randomuser.me/api/') // ! istek atiyoruz
     .then (res => res.json ()) //! veriyi jsonlastiryoruz
     .then (data => console.log (userData=data))  //! catch blogu atip error de verdirebilriz
     .catch (err => console.log (err));
-
+  console.log(userData)
   return (
     <div>
 
