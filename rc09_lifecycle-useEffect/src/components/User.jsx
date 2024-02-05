@@ -4,14 +4,22 @@ const User = () => {
   // let userData ="deneme"  //! global degiskene aktariyoruz bu sekilde degisken yazarak
 
   const [userData, setUserData] = useState("")
+
+  const getUser =() => {
+    fetch ('https://randomuser.me/api/') // ! istek atiyoruz  yeniden render olmasi icin state yapmaliyiz
+    .then (res => res.json ()) //! veriyi jsonlastiryoruz
+    .then (data => setUserData(data)) //! catch blogu atip error de verdirebilriz
+    .catch (err => console.log (err));
+  }
+
+  console.log(userData)
+return (
+
+
+
     // ? Klasik fetch yapisi
 
-    fetch ('https://randomuser.me/api/') // ! istek atiyoruz  yeniden render olmasi icin state yapmaliyiz
-      .then (res => res.json ()) //! veriyi jsonlastiryoruz
-      .then (data => console.log ((userData = data))) //! catch blogu atip error de verdirebilriz
-      .catch (err => console.log (err));
-  console.log (userData);
-  return (
+    
     <div>
 
       <img src="" alt="" />
@@ -23,7 +31,7 @@ const User = () => {
       <h5>phone</h5>
       <h6>address</h6>
 
-      User
+      <button className='btn btn-success'  onClick={getUser}> Get Random User</button>
 
     </div>
   );
