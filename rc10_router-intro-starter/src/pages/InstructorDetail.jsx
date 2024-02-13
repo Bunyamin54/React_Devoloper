@@ -1,13 +1,22 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 const InstructorDetail = () => {
 
   let {id} = useParams()
-  console.log(id)
+
+  let location =useLocation
+
+
+
   return (
     <div className='p-3'>
-      InstructorDetail
+      <p>
+
+   from useParam: I'am instructor <spam className="text-danger fw-bolder" >{id} </spam>
+
+
+      </p>
     </div>
   )
 }
