@@ -8,7 +8,7 @@ const Contact = () => {
 
 
       <button className="btn btn-success" onClick={() => navigate(-1)}> Go Back</button>
-      <button className="btn btn-danger"> Go Home</button>
+      <button className="btn btn-danger"onClick={() => navigate("/")}> Go Home</button>
     </div>
   );
 };
