@@ -5,18 +5,22 @@ const InstructorDetail = () => {
 
   let {id} = useParams()
 
-  let location =useLocation
-
-
+  let {state, pathname} = useLocation()
 
   return (
     <div className='p-3'>
       <p>
 
-   from useParam: I'am instructor <spam className="text-danger fw-bolder" >{id} </spam>
+   from useParam: I'am instructor  <spam className="text-danger fw-bolder">{id}</spam>
+      </p>
+      <p>
+
+   from useLocation: I'am instructor <spam className="text-danger fw-bolder" >{state?.name} </spam>
 
 
       </p>
+
+      <p>Our path is: {pathname} </p>
     </div>
   )
 }
