@@ -6,7 +6,7 @@ const Instructors = () => {
       <h1>Instructors</h1>
     <div className="d-flex flex-column">
 
-    <Link to ="/instructor/1"> Intructor-1</Link>
+    <Link to ="/instructors/1"> Intructor-1</Link>
     <Link to ="2"> Intructor-2</Link>
     <Link to ="3"> Intructor-3</Link>
 
