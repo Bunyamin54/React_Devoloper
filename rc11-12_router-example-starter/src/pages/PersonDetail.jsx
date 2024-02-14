@@ -18,7 +18,10 @@ const PersonDetail = () => {
   const getPerson = () => {
     axios(`https://reqres.in/api/users/${id}`)
       .then ((res) => setPerson(res.data.data))
-      .catch ((err) => console.log (err));
+      .catch ((err) => {
+        setError(true)
+        console.log (err);
+      })
     };
 
    useEffect(() => {
