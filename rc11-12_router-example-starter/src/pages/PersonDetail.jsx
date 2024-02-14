@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {useLocation, useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios';
 import NotFound from './NotFound';
-
+import spinner from "../img/Spinner-2.gif"
 
 const PersonDetail = () => {
   // let {state:person} = useLocation()
@@ -13,6 +13,7 @@ const PersonDetail = () => {
 
   const [person, setPerson] = useState({})
   const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(true)
 
 
   const getPerson = () => {
@@ -21,7 +22,7 @@ const PersonDetail = () => {
       .catch ((err) => {
         setError(true)
         console.log (err);
-      })
+      }).finally(() => setLoading(false))
     };
 
    useEffect(() => {
@@ -32,6 +33,15 @@ const PersonDetail = () => {
 
    if (error) {
     return <NotFound/>
+   }else if (loading) {
+    return (
+
+      <div className='text-center mt-4'> 
+
+    <img src={spinner} alt="spinner" />
+
+      </div>
+    )
    }
 
 
