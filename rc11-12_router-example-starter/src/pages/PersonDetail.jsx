@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom'
 const PersonDetail = () => {
 let {state:person} = useLocation()
 let navigate= useNavigate()
+
+
   return (
     <div className="container text-center">
     <h3>
