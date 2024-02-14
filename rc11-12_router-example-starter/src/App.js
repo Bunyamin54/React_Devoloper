@@ -11,17 +11,7 @@ import PersonDetail from "./pages/PersonDetail";
 function App() {
   return (
     <>
-      <Nav />
-
-      <Routes>
-    <Route path="/" element= {<Home />} /> 
-    <Route path="/paths" element={<Paths/>}/>
-    <Route path="/people" element={<People/>}/>
-    <Route path="/people/:id" element={<PersonDetail/>}/>
-    <Route path="/contact" element={<Contact/>}/>
-    <Route path="*" element={<NotFound/>}/>
-      </Routes>
-      <Footer />
+    
     </>
   );
 }
