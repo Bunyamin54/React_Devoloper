@@ -16,20 +16,22 @@ const PersonDetail = () => {
   const [loading, setLoading] = useState(true)
 
 
-  const getPerson = () => {
-    axios(`https://reqres.in/api/users/${id}`)
-      .then ((res) => setPerson(res.data.data))
-      .catch ((err) => {
-        setError(true)
-        console.log (err);
-      }).finally(() => setLoading(false))
-    };
 
    useEffect(() => {
 
+    const getPerson = () => {
+      axios(`https://reqres.in/api/users/${id}`)
+        .then ((res) => setPerson(res.data.data))
+        .catch ((err) => {
+          setError(true)
+          console.log (err);
+        }).finally(() => setLoading(false))
+      };
+  
+
    getPerson();
 
-   }, []);
+   }, [id]);
 
    if (error) {
     return <NotFound/>
