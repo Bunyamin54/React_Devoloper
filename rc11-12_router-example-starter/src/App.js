@@ -4,15 +4,24 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import People from "./pages/People";
 import NotFound from "./pages/NotFound";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Nav />
-      <Home />
-      <People />
+
+      <Routes>
+      
+      
+    <Route path="/" element= {<Home />} /> 
+    <Route path="/paths" element={<People/>}/>
       <Contact />
       <NotFound />
+
+
+      </Routes>
+   
       <Footer />
     </>
   );
