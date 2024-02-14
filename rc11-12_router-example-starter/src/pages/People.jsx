@@ -28,6 +28,7 @@ const People = () => {
               className=" col-sm-12 col-md-6 col-lg-4"
               type="button"
               // Absolute path (tam adres vermek)
+              
               onClick={()=>navigate(`/people/${id}`)}
             >
               <img className="rounded" src={avatar} alt="img" />
