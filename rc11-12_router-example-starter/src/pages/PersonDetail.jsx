@@ -1,14 +1,32 @@
-import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import {useLocation, useNavigate, useParams} from 'react-router-dom';
+import axios from 'axios';
+
 
 const PersonDetail = () => {
-let {state:person} = useLocation()
-let navigate= useNavigate()
+  // let {state:person} = useLocation()
+  let navigate = useNavigate ();
+
+  let {id} = useParams ();
+  console.log ({id});
+
+  const getPerson = () => {
+    axios (`htpps://regres.in/api/users/${id}`)
+      .then (res => console.log (res))
+      .catch (err => console.log (err));
+    };
+
+   useEffect(() => {
+
+   getPerson()
+
+   }, [])
+
 
 
   return (
     <div className="container text-center">
-    <h3>
+      {/* <h3>
       {person?.first_name} {person?.last_name}
     </h3>
     <img className="rounded" src={person?.avatar} alt="" />
@@ -20,9 +38,9 @@ let navigate= useNavigate()
       <button onClick={() => navigate(-1)} className="btn btn-warning">
         Go Back
       </button>
+    </div> */}
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default PersonDetail
+export default PersonDetail;
