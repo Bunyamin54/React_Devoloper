@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Nav from '../components/Nav';
 import {Route, Routes} from 'react-router-dom';
 import Home from '../pages/Home';
@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import Aws from '../pages/Aws';
 import FullStack from '../pages/FullStack';
 import Nextjs from '../pages/Nextjs';
+import React from '../pages/React';
 
 const AppRouter = () => {
   return (
