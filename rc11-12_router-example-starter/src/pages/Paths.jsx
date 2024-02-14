@@ -17,8 +17,8 @@ const Paths = () => {
       <div />
 
       <div>
-      <Link className='btn btn-success w-50'> Fullstack </Link>
-      <Link className='btn btn-warning w-50'> AWS-Devops </Link>
+      <Link to="fullstack" className='btn btn-success w-50'> FullStack </Link>
+      <Link to ="aws"className='btn btn-warning w-50'> AWS-Devops </Link>
 
       </div>
     <Outlet/>
