@@ -33,6 +33,7 @@ const People = () => {
               //! Relative path goreceli adres vermek
               onClick={()=>navigate(`${id}`,{state:person})}
             >
+              
               <img className="rounded" src={avatar} alt="img" />
               <h6>
                 {first_name} {last_name}
