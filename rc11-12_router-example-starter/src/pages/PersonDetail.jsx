@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useLocation, useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios';
 
@@ -8,11 +8,14 @@ const PersonDetail = () => {
   let navigate = useNavigate ();
 
   let {id} = useParams ();
-  console.log ({id});
+  console.log ({id})
+
+  const [person, setPerson] = useState({})
+
 
   const getPerson = () => {
     axios (`htpps://regres.in/api/users/${id}`)
-      .then (res => console.log (res))
+      .then (res => setPerson (res.data.data))
       .catch (err => console.log (err));
     };
 
