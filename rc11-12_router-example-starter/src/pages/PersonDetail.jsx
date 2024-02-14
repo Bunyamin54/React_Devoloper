@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {useLocation, useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios';
+import NotFound from './NotFound';
 
 
 const PersonDetail = () => {
@@ -11,6 +12,7 @@ const PersonDetail = () => {
   console.log ({id})
 
   const [person, setPerson] = useState({})
+  const [error, setError] = useState(false)
 
 
   const getPerson = () => {
@@ -24,6 +26,11 @@ const PersonDetail = () => {
    getPerson();
 
    }, []);
+
+   if (error) {
+    return <NotFound/>
+   }
+
 
   return (
     <div className="container text-center">
