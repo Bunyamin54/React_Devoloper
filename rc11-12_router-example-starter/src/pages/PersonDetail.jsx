@@ -14,22 +14,20 @@ const PersonDetail = () => {
 
 
   const getPerson = () => {
-    axios (`htpps://regres.in/api/users/${id}`)
-      .then (res => setPerson (res.data.data))
-      .catch (err => console.log (err));
+    axios(`https://reqres.in/api/users/${id}`)
+      .then ((res) => setPerson(res.data.data))
+      .catch ((err) => console.log (err));
     };
 
    useEffect(() => {
 
-   getPerson()
+   getPerson();
 
-   }, [])
-
-
+   }, []);
 
   return (
     <div className="container text-center">
-      {/* <h3>
+      <h3>
       {person?.first_name} {person?.last_name}
     </h3>
     <img className="rounded" src={person?.avatar} alt="" />
@@ -41,7 +39,7 @@ const PersonDetail = () => {
       <button onClick={() => navigate(-1)} className="btn btn-warning">
         Go Back
       </button>
-    </div> */}
+    </div>
     </div>
   );
 };
