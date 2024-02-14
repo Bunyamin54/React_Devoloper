@@ -31,7 +31,7 @@ const People = () => {
 
               // onClick={()=>navigate(`/people/${id}`)}
               //! Relative path goreceli adres vermek
-              onClick={()=>navigate(`${id}`)}
+              onClick={()=>navigate(`${id}`,{state:person})}
             >
               <img className="rounded" src={avatar} alt="img" />
               <h6>
