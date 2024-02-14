@@ -10,6 +10,7 @@ import NotFound from '../pages/NotFound';
 import Footer from '../components/Footer';
 import Aws from '../pages/Aws';
 import FullStack from '../pages/FullStack';
+import Nextjs from '../pages/Nextjs';
 
 const AppRouter = () => {
   return (
@@ -21,8 +22,13 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/paths" element={<Paths />}>
 
-          <Route index element={<FullStack/>} />
-          <Route path= "/paths/fullstack" element={<FullStack/>} />
+          <Route index element={<FullStack />} />
+          <Route path="/paths/fullstack" element={<FullStack />}>
+            <Route path="react" element={<React/>} />
+            <Route path="nextjs" element={<Nextjs/>} />
+
+            /
+          </Route>
           <Route path="aws" element={<Aws />} />
 
         </Route>
