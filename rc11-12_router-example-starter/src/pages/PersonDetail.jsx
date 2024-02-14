@@ -1,9 +1,9 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const PersonDetail = () => {
 let {state:person} = useLocation()
-
+let navigate= useNavigate()
   return (
     <div className="container text-center">
     <h3>
@@ -12,10 +12,10 @@ let {state:person} = useLocation()
     <img className="rounded" src={person?.avatar} alt="" />
     <p>{person?.email}</p>
     <div>
-      <button  className="btn btn-success me-2">
+      <button onClick={() => navigate("/")} className="btn btn-success me-2">
         Go Home
       </button>
-      <button  className="btn btn-warning">
+      <button onClick={() => navigate(-1)} className="btn btn-warning">
         Go Back
       </button>
     </div>
