@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Path = () => {
+const Paths = () => {
   return (
     <div>
-      
+      Paths
     </div>
   )
 }
 
-export default Path
+export default Paths
