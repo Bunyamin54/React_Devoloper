@@ -10,7 +10,7 @@ function Navs() {
 
   //  ! comsuming
 
-  const  {user} = useContext(LoginContext)
+  const  {user,setUser} = useContext(LoginContext)
 
 
 
@@ -41,7 +41,7 @@ function Navs() {
 
             {user.email && user.password ? (<Link 
             
-            className="nav-link" to="/login">
+            className="nav-link" to="/login" onClick={() => setUser  ({email: "", password:""}) }>
               Logout
             </Link> ) :
 
