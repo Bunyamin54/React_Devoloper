@@ -12,6 +12,7 @@ import Aws from '../pages/Aws';
 import FullStack from '../pages/FullStack';
 import Nextjs from '../pages/Nextjs';
 import React from '../pages/React';
+import PrivateRouter from './PrivateRouter';
 
 const AppRouter = () => {
   return (
@@ -33,8 +34,14 @@ const AppRouter = () => {
           <Route path="aws" element={<Aws />} />
 
         </Route>
+
+        <Route  element= {<PrivateRouter/>}>  
+        
         <Route path="/people" element={<People />} />
         <Route path="/people/:id" element={<PersonDetail />} />
+        
+          </Route>
+       
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
