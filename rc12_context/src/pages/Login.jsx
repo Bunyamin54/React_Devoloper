@@ -4,14 +4,18 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useContext } from "react";
 import { LoginContext } from "../context/LoginContext";
+import {useNavigate} from "react-router-dom"
 
 const Login = () => {
  //? Consuming of login context paylasma
 
  const { user, setUser} = useContext(LoginContext)
-
+const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/")
+    setUser({email: "" , password:""})
+
   };
 
   return (
