@@ -4,9 +4,14 @@ const Login = () => {
 
       const [email, setEmail] = useState("")
       const [password, setPassword] = useState("")
+
+      const handleSubmit = (e) => {
+   e.preventDefault()
+
+      }
   return (
     <div className="container mt-4">
-    <form >
+    <form  onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="exampleInputEmail1" className="form-label">
           Email address
