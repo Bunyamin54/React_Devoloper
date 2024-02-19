@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Login = () => {
+
+      const [email, setEmail] = useState("")
+      const [password, setPassword] = useState("")
   return (
     <div className="container mt-4">
     <form >
@@ -13,7 +16,7 @@ const Login = () => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-        
+          onChange={(e)=>setEmail(e.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -24,7 +27,7 @@ const Login = () => {
           type="password"
           className="form-control"
           id="exampleInputPassword1"
-       
+          onChange={(e)=>setPassword(e.target.value)}
         />
       </div>
 
