@@ -23,6 +23,7 @@ const Login = () => {
           <Form.Control
             type="email"
             placeholder="Enter your email"
+            required
             name="email"
             value={user?.email}
             onChange={(e) => setUser({ ...user, email: e.target.value })}
@@ -34,6 +35,7 @@ const Login = () => {
           <Form.Control
             type="password"
             placeholder="Enter your password"
+            required
             name="password"
             value={user?.password}
             onChange={(e) => setUser({ ...user, password: e.target.value })}
