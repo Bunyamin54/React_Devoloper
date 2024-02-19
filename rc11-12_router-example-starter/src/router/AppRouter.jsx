@@ -17,7 +17,7 @@ import Login from '../pages/Login';
 import {useState} from 'react';
 
 const AppRouter = () => {
-  const [user, setUser] = useState ({});
+  const [user, setUser] = useState (false);
 
   return (
     <div>
