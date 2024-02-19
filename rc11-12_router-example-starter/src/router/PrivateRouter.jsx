@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
+import {Outlet} from 'react-router-dom';
+import Login from '../pages/Login';
 
 const PrivateRouter = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const user = false;
+  return user ? <Outlet /> : <Login />;
+};
 
-export default PrivateRouter
+export default PrivateRouter;
