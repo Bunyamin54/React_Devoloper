@@ -14,8 +14,11 @@ import Nextjs from '../pages/Nextjs';
 import React from '../pages/React';
 import PrivateRouter from './PrivateRouter';
 import Login from '../pages/Login';
+import {useState} from 'react';
 
 const AppRouter = () => {
+  const [user, setUser] = useState ({});
+
   return (
     <div>
 
@@ -36,7 +39,7 @@ const AppRouter = () => {
 
         </Route>
 
-        <Route element={<PrivateRouter />}>
+        <Route element={<PrivateRouter user={user} />}>
 
           <Route path="/people" element={<People />} />
           <Route path="/people/:id" element={<PersonDetail />} />
@@ -44,7 +47,7 @@ const AppRouter = () => {
         </Route>
 
         <Route path="/contact" element={<Contact />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login" element={<Login setUser={setUser}  />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
