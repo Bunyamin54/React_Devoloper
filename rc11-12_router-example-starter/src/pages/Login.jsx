@@ -9,7 +9,7 @@ const Login = ({setUser}) => {
   let navigate = useNavigate()
   const handleSubmit = e => {
     e.preventDefault ();
-    localStorage.setItem("user", JSON.stringify({email,password}))
+    sessionStorage.setItem("user", JSON.stringify({email,password}))
     setUser({email,password})
     navigate("/")
   };
