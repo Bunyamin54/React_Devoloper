@@ -44,7 +44,7 @@ const AppRouter = () => {
         </Route>
 
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
