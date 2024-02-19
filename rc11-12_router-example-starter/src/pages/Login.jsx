@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = ({setUser}) => {
 
 
   const [email, setEmail] = useState ('');
   const [password, setPassword] = useState ('');
-
+  let navigate = useNavigate()
   const handleSubmit = e => {
     e.preventDefault ();
     setUser({email,password})
+    navigate("/")
   };
   return (
     <div className="container mt-4">
