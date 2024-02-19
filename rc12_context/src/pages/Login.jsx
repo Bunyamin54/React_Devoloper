@@ -2,9 +2,13 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useContext } from "react";
+import { LoginContext } from "../context/LoginContext";
 
 const Login = () => {
-  const [user, setUser] = useState({ email: "", password: "" });
+ //? Consuming of login context paylasma
+
+ const { user, setUser} = useContext(LoginContext)
 
   const handleSubmit = (e) => {
     e.preventDefault();
