@@ -14,7 +14,7 @@ const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/")
-    setUser({email: "" , password:""})
+    // setUser({email: "" , password:""})
 
   };
 
