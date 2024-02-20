@@ -1,35 +1,34 @@
-import { useState } from "react";
+import {useReducer} from 'react';
+import {initialState, reducer} from './reducer';
 
-const UseStateExample = () => {
-  const [catImage, setCatImage] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+const UseReducerExample = () => {
+  const [state, dispatch] = useReducer (reducer, initialState);
+
+  const {loading, error, catImage} = state;
 
   const getCatImage = async () => {
-    const url = "https://api.thecatapi.com/v1/images/search";
-    setLoading(true);
+    const url = 'https://api.thecatapi.com/v1/images/search';
+
+    dispatch ({type: 'START'});
+
     try {
-      const res = await fetch(url);
-      const data = await res.json();
-      setCatImage(data[0].url);
-      setError("");
+      const res = await fetch (url);
+      const data = await res.json ();
+
+      dispatch ({type: 'SUCCES', payload: data[0].url});
     } catch (error) {
-      setError("DATA CAN NOT BE FETCHED");
-      setCatImage("");
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
+      console.log (error);
+    } 
   };
-  console.log(error);
-  console.log(catImage);
+  console.log (error);
+  console.log (catImage);
 
   return (
     <div>
       <button
         onClick={getCatImage}
         disabled={loading}
-        style={{ display: "block", margin: "1rem" }}
+        style={{display: 'block', margin: '1rem'}}
       >
         Get Cat Image
       </button>
@@ -39,4 +38,4 @@ const UseStateExample = () => {
   );
 };
 
-export default UseStateExample;
+export default UseReducerExample;
