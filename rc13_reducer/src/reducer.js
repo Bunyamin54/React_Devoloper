@@ -17,10 +17,12 @@ export const reducer = ( initialState, action) =>  {
         return {...initialState, loading:true }
 
         case "SUCCES" :
-        return {...initialState, catImage: action.payload, error:"" }
 
-   
-    
+        return {...initialState, catImage: action.payload, error:"", loading: false }
+        case "FAIL" :
+
+        return {...initialState, catImage:"",  error: action.payload , loading: false }
+
         default:
             break;
     }
