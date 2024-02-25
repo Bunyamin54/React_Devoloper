@@ -1,4 +1,4 @@
-import NavStyled from "./styled/NavStyled"
+import NavStyled from './styled/NavStyled';
 import Button from './styled/Button';
 
 const Nav = () => {
@@ -6,14 +6,14 @@ const Nav = () => {
     <NavStyled>
       <div>
 
-        <img src="./images/logo.png" width="250px" alt="logo" />
+        <img src="./images/logoUIA.png" width="250px" alt="logo" />
       </div>
 
-  <div>
-  <Button >Apply Coursess</Button> 
-      <Button primary>Talk To Adviser</Button>
+      <div>
+        <Button>IT og informasjonssystemer</Button>
+        <Button primary>Hva lærer du?</Button>
 
-  </div>
+      </div>
     </NavStyled>
   );
 };
