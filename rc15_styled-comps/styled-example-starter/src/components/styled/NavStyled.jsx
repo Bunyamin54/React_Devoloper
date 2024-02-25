@@ -11,7 +11,7 @@ justify-content: space-between;
 @media (max-width: 700px) {
     flex-direction:column;
 }
-
+ background-color: ${({theme}) => theme.colors.primary}
 
 `;
 
