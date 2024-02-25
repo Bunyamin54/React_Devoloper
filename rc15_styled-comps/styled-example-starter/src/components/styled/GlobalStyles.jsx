@@ -17,6 +17,7 @@ body{
 
 p{
     font-size:1.1rem;
+    line-height:2;
 }
 
 
