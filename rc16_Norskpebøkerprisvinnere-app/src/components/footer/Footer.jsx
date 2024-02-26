@@ -1,5 +1,7 @@
 import React from 'react'
 import { FooterBtn, FooterContainer } from './Footer.style'
+import { lightTheme } from '../../styles/theme'
+import { lightIcon } from '../../helper/iconData'
 
 const Footer = () => {
   return (
@@ -7,7 +9,7 @@ const Footer = () => {
 
    <FooterBtn>
 
-
+    {lightIcon}
 
    </FooterBtn>
 
