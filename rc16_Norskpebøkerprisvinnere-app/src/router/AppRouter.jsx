@@ -11,13 +11,13 @@ import PrivateRouter from './PrivateRouter';
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      AppRouter
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/about" element={<PrivateRouter />}>
+
+        {/* <Route path="/about" element={<PrivateRouter />}>
      
         <Route path="/about" element={<About />} />
 
@@ -28,9 +28,14 @@ const AppRouter = () => {
 
         <Route path="/detail/:id" element={<Detail />} />
 
+        </Route> */}
+
+        <Route element={<PrivateRouter />}>
+
+          <Route path="/about" element={<About />} />
+          <Route path="/deatil/:id" element={<Detail />} />
+
         </Route>
- 
-        <Route path="/" element={<Home />} />
 
       </Routes>
       <Footer />
