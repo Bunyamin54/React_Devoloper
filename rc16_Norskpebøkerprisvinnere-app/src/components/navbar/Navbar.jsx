@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { menuIcon } from '../../helper/iconData'
 import { HamburgerIcon, Logo, Menu, MenuLink, Nav } from './Navbar.style'
 
 const Navbar = () => {
+const [toggle, setToggle] = useState(false)
   return (
 
-       <Nav>
+       <Nav justifiy="space-between" wrap="wrap">
 
     <Logo> Clarus Library</Logo>
-    <HamburgerIcon> {menuIcon}</HamburgerIcon>
-     <Menu>
-      <MenuLink></MenuLink>
-      <MenuLink></MenuLink>
-      <MenuLink></MenuLink>
-      <MenuLink></MenuLink>
-      <MenuLink></MenuLink>
+    <HamburgerIcon onClick={() => setToggle (!toggle)}> {menuIcon}</HamburgerIcon>
+     <Menu showMenu= {toggle}> 
+      <MenuLink>home</MenuLink>
+      <MenuLink>about</MenuLink>
+      <MenuLink>register</MenuLink>
+      <MenuLink>login</MenuLink>
+   
      </Menu>
 
        </Nav>
