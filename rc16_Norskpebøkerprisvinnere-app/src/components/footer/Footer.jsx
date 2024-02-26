@@ -1,16 +1,17 @@
 import React from 'react'
+import { FooterBtn, FooterContainer } from './Footer.style'
 
 const Footer = () => {
   return (
-   <FooterConatiner>
+   <FooterContainer>
 
    <FooterBtn>
 
 
-    
+
    </FooterBtn>
 
-   </FooterConatiner>
+   </FooterContainer>
   )
 }
 
