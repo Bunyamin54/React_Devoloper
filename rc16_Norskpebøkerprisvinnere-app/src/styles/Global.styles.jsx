@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle  `
    }
    
    body {
-       background-color:
+       background-color:  ${({theme}) => theme.colors.mainColor}
     }
 
 
