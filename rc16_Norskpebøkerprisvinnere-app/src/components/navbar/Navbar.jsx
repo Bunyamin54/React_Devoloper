@@ -15,9 +15,9 @@ const handleClose = () => {
 }
   return (
 
-       <Nav justifiy="space-between" wrap="wrap">
+       <Nav justify="space-between" wrap="wrap">
 
-    <Logo> Clarus Library</Logo>
+    <Logo to = "/"> Clarus Library</Logo>
     <HamburgerIcon onClick={() => setToggle (!toggle)}> {menuIcon}</HamburgerIcon>
      <Menu showMenu= {toggle}> 
       <MenuLink to="/" onClick={handleClose} >home</MenuLink>
