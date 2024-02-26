@@ -2,6 +2,7 @@
 
 // Theme Context
 
+import { useEffect } from "react";
 import { createContext, useContext, useState } from "react";
 //! Auth context olusturuldu. 
 
@@ -9,7 +10,12 @@ const AuthContext = createContext();
 
 //! Sarmaliyici component provider
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState("false");
+  const [user, setUser] = useState(sessionStorage.getItem ("user") || (false));
+  useEffect(() => {
+    sessionStorage.setItem("user", user)
+  
+  }, [user])
+  
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
