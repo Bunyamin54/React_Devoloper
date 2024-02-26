@@ -1,14 +1,14 @@
 import React from 'react'
 import Footer from '../components/footer/Footer'
-
+import {BrowserRouter} from "react-router-dom"
 const AppRouter = () => {
   return (
-    <div>AppRouter
+    <BrowserRouter>AppRouter
 
     <Footer/> 
 
 
-    </div>
+    </BrowserRouter>
    
   )
 }
