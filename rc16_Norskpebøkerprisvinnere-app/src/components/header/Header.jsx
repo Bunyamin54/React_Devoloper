@@ -4,7 +4,17 @@ const Header = () => {
   return (
     <HeaderContainer>
 
-   <HeaderTitle> Årets Bøker </HeaderTitle>
+   <HeaderTitle> Årets Beste Bøker </HeaderTitle>
+
+   <HeaderForm>
+      <SearchInput/>
+      <SelectBox>
+        <option>Alle</option>
+      </SelectBox>
+      <HeaderButton>Søk....</HeaderButton>
+
+
+   </HeaderForm>
 
     </HeaderContainer>
   )
