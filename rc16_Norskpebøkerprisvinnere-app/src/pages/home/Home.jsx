@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <HomeContainer>
 
-      <Header />
+      <Header/>
       <HomeImage> 
 
       <img src= {homeImg} alt="Home" />

@@ -15,7 +15,7 @@ const Header = () => {
       <HeaderTitle> Årets Beste Bøker </HeaderTitle>
 
       <HeaderForm>
-        <SearchInput />
+        <SearchInput type='search'placeholder='søk....' />
         <SelectBox>
           <option>Alle</option>
         </SelectBox>
