@@ -1,27 +1,27 @@
-// Auth Context// Theme Context
+// Books Context// Theme Context
 
 // Theme Context
 
 import { useEffect } from "react";
 import { createContext, useContext, useState } from "react";
-//! Auth context olusturuldu. 
+//! Books context olusturuldu. 
 
-const AuthContext = createContext();
+const BooksContext = createContext();
 
 //! Sarmaliyici component provider
-const AuthContextProvider = ({ children }) => {
+const BooksContextProvider = ({ children }) => {
   
   
 
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
+    <BooksContext.Provider value={{  }}>
       {children}
-    </AuthContext.Provider>
+    </BooksContext.Provider>
   );
 };
 //! consuming custom hook 
-export const useAuthContext = () => {
-    return useContext(AuthContext)
+export const useBooksContext = () => {
+    return useContext(BooksContext)
 }
 
-export default AuthContextProvider;
+export default BooksContextProvider;
