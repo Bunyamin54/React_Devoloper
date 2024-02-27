@@ -17,7 +17,21 @@ color: ${({theme}) => theme.colors.detailColor};
 `
 
 export const HeaderForm = styled.form`
-
+ display: flex;
+  width: 45%;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(15, 63, 42, 0.3);
+  margin: 20px;
+  background-color: ${({ theme }) => theme.colors.headerFormColor};
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+  }
 
 `
 
