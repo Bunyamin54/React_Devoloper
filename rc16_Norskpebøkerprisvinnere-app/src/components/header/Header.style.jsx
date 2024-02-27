@@ -73,7 +73,7 @@ border-radius: 3px;
 `
 
 export const HeaderButton = styled.button`
- background-color: #e1f1dd;
+ background-color: #82d66c;
   padding: 5px;
   outline: none;
   height: 3rem;
