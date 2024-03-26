@@ -14,9 +14,10 @@ const AuthContextProvider = ({children}) => {
      let userCredential = await createUserWithEmailAndPassword(auth, email, password)  
 
      console.log(userCredential)
+     navigate("/")
     } catch (error) {
 
-        console.log(error)
+        console.log(error.message)
     }
   }
 
