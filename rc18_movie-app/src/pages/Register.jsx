@@ -12,19 +12,19 @@ const Register = () => {
             Sign Up
           </h2>
           <div className="relative z-0 w-full mb-6 group">
-            <input className="peer" name="floating_text" type="text" required />
+            <input className="peer" name="floating_text" type="text" placeholder=" " required />
             <label htmlFor="floating_text">First Name</label>
           </div>
           <div className="relative z-0 w-full mb-6 group">
-            <input className="peer" name="floating_text" type="text" required />
+            <input className="peer" name="floating_text" type="text"  placeholder=" "required />
             <label htmlFor="floating_text">Last Name</label>
           </div>
           <div className="relative z-0 w-full mb-6 group">
-            <input className="peer" name="floating_email" type="email" />
+            <input className="peer" name="floating_email"  placeholder=" "  required type="email" />
             <label htmlFor="floating_email">Email</label>
           </div>
           <div className="relative z-0 w-full mb-6 group">
-            <input className="peer" name="floating_password" type="password" />
+            <input className="peer" name="floating_password" placeholder=" " requiredtype="password" />
             <label htmlFor="floating_password">Password</label>
           </div>
           <button type="submit" className="btn-danger">Register</button>
