@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import GoogleIcon from '../assets/icons/GoogleIcon';
 import AuthContext from '../context/AuthContext';
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState ('');
