@@ -23,7 +23,8 @@ const AuthContextProvider = ({children}) => {
 
 
     try {
-      await signInWithEmailAndPassword(auth, email, password)  
+    let userCredential=   await signInWithEmailAndPassword(auth, email, password)  
+    console.log(userCredential)
     } catch (error) {
       console.log(error.message)
     }
