@@ -62,7 +62,7 @@ const AuthContextProvider = ({children}) => {
         console.log(user);
       } else {
         // User is signed out
-        setCurrentUser(false);
+        setCurrentUser();
         console.log("logged out");
       }
     });
@@ -73,7 +73,7 @@ const AuthContextProvider = ({children}) => {
     signOut(auth)
     toastSuccessNotify("Logged out succesfully!")
   }
-  const values = {createUser, signIn, logOut};
+  const values = {createUser, signIn, logOut, currentUser};
 
 
 
