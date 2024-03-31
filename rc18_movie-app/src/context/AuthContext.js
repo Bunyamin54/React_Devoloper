@@ -3,6 +3,7 @@ import {auth} from '../auth/firebase';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from 'firebase/auth';
 import {useNavigate} from 'react-router-dom';
 import { toastErrorNotify, toastSuccessNotify } from '../helpers/ToastNotify';
@@ -44,6 +45,12 @@ const AuthContextProvider = ({children}) => {
   };
 
   const values = {createUser, signIn};
+
+
+  const logOut = () => {
+    signOut(auth)
+    toastSuccessNotify("Logged out succesfully!")
+  }
 
   return (
     <div>
