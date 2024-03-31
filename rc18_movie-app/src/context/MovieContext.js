@@ -12,19 +12,20 @@ const MovieContextProvider = ({children}) => {
 
 
     const [movies, setMovies] = useState([])
+    const [loading, setLoading]= useState(false)
+
 
     useEffect(() => {
       getMovies(FEATURED_API)
-    
-    
     }, [])
     
 
    const getMovies = (API) =>{
-
+     setLoading(true)
    axios.get(API)
    .then((res )=> setMovies(res.data.results))
    .catch((err)=> console.log(err))
+   .finally(() => setLoading(false))
 
    }
 
