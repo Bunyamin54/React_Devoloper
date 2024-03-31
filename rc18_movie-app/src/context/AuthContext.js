@@ -62,7 +62,7 @@ const AuthContextProvider = ({children}) => {
         console.log(user);
       } else {
         // User is signed out
-        setCurrentUser();
+        setCurrentUser(false);
         console.log("logged out");
       }
     });
