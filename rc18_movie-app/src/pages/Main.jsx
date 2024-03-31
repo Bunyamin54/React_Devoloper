@@ -7,13 +7,17 @@ const API_KEY = process.env.REACT_APP_TMDB_KEY;
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
 const Main = () => {
-  const {movies, loading} = useContext (MovieContext);
+  const {movies, loading, getMovies} = useContext (MovieContext);
   const [searchTerm, setSearchTherm] = useState("")
   
   console.log (movies);
   
   const handleSubmit= (e) => {
-    
+    e.preventDefault(
+
+    )
+
+    getMovies (SEARCH_API + searchTerm)
   }
    return (
     <>
