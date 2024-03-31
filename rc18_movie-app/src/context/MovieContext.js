@@ -1,5 +1,5 @@
-import React, {createContext } from 'react'
-
+import React, {createContext, useState } from 'react'
+import axios from "axios"
 
 export const MovieContext =  createContext ()
 
@@ -17,7 +17,7 @@ const MovieContextProvider = ({children}) => {
 
    axios.get(API)
    .then((res )=> console.log(res))
-   .catch((err)) => console.log(err)
+   .catch((err)=> console.log(err))
 
    }
 
