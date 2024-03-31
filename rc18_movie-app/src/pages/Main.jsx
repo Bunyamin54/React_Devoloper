@@ -9,12 +9,15 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}
 const Main = () => {
   const {movies, loading} = useContext (MovieContext);
   const [searchTerm, setSearchTherm] = useState("")
-
+  
   console.log (movies);
-
-  return (
+  
+  const handleSubmit= (e) => {
+    
+  }
+   return (
     <>
-    <form className='flex justify-center p-2'>
+    <form onSubmit={handleSubmit} className='flex justify-center p-2'>
     <input type="search" className='w-80 h-8 roundended-med p-1 m-2'
     placeholder='Search a movie...'
     onChange={(e => setSearchTherm(e.target.value))}
