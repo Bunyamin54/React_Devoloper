@@ -37,8 +37,9 @@ const AuthContextProvider = ({children}) => {
       );
       console.log (userCredential);
       navigate ('/');
+      toastSuccessNotify("Logged in succesfully!")
     } catch (error) {
-      console.log (error.message);
+      toastErrorNotify(error.message);
     }
   };
 
