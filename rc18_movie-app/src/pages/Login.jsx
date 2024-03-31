@@ -1,23 +1,21 @@
-import React, {useContext, useState} from 'react';
-import GoogleIcon from '../assets/icons/GoogleIcon';
-import AuthContext from '../context/AuthContext';
+import React, { useContext, useState } from "react";
+import GoogleIcon from "../assets/icons/GoogleIcon";
+import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState ('');
-  const [password, setPassword] = useState ('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { signIn, signUpProvider, forgotPassword } = useContext(AuthContext);
 
-  const {signIn} = useContext (AuthContext);
-
-  const handleSubmit = e => {
-    e.preventDefault ();
-    signIn (email, password);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signIn(email, password);
   };
-
   return (
-    <div className="overflow-hidden flex-1 h-screen justify-center items-center bg-[#23242a]">
+    <div className="overflow-hidden flex-1 h-screen justify-center items-center dark:bg-gray-dark-main">
       <div
-        className={`mt-[3vh] mx-auto overflow-hidden relative w-[380px] h-[500px] rounded-[8px] bg-[#1c1c1c] before:content-[""] before:absolute before:w-[380px] before:h-[420px] before:top-[-50%] before:left-[-50%] after:content-[""] after:absolute after:w-[380px] after:h-[420px] after:top-[-50%] after:left-[-50%] custom-linear-gradient`}
+        className={`mt-[10vh] mx-auto overflow-hidden relative  w-[380px] h-[500px] rounded-[8px] dark:bg-[#1c1c1c] before:content-[""] before:absolute before:w-[380px] before:h-[420px] before:top-[-50%] before:left-[-50%] after:content-[""] after:absolute after:w-[380px] after:h-[420px] after:top-[-50%] after:left-[-50%] custom-linear-gradient`}
       >
         <form
           onSubmit={handleSubmit}
@@ -31,10 +29,10 @@ const Login = () => {
             <input
               className="peer"
               name="floating_email"
+              type="email"
               placeholder=" "
               required
-              type="email"
-              onChange={e => setEmail (e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <label htmlFor="floating_email">Email</label>
           </div>
@@ -42,13 +40,13 @@ const Login = () => {
             <input
               className="peer"
               name="floating_password"
+              type="password"
               placeholder=" "
-              requiredtype="password"
-              onChange={e => setPassword (e.target.value)}
+              required
+              onChange={(e) => setPassword(e.target.value)}
             />
             <label htmlFor="floating_password">Password</label>
           </div>
-
           <div className="flex justify-between">
             <span
               onClick={() => forgotPassword(email)}
@@ -59,13 +57,17 @@ const Login = () => {
             <Link
               className="py-3 font-[0.75em] cursor-pointer decoration-none text-gray-500 hover:text-[#ff4b45]"
               to="/register"
-            ></Link>
-          
-
-          <button type="submit" className="btn-danger">Register</button>
+            >
+              Sign Up
+            </Link>
+          </div>
+          <button type="submit" className="btn-danger">
+            Login
+          </button>
           <button
             type="button"
             className="btn-danger flex justify-between items-center"
+            onClick={() => signUpProvider()}
           >
             Continue with Google
             <GoogleIcon color="currentColor" />
