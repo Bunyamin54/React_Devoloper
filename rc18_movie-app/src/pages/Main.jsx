@@ -13,10 +13,9 @@ const Main = () => {
   console.log (movies);
   
   const handleSubmit= (e) => {
-    e.preventDefault(
-
-    )
-
+    e.preventDefault()
+  
+    if(currentUser) {
     getMovies (SEARCH_API + searchTerm)
   }
    return (
