@@ -5,6 +5,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
 } from 'firebase/auth';
 import {useNavigate} from 'react-router-dom';
 import { toastErrorNotify, toastSuccessNotify } from '../helpers/ToastNotify';
@@ -27,8 +28,11 @@ const AuthContextProvider = ({children}) => {
         email,
         password
       );
-
-      console.log (userCredential);
+      await updateProfile(auth.currentUser, {
+        //* key ve value değerleri aynı ise sadece key değerini yazabiliriz
+        displayName,
+      });
+      
       navigate ('/');
     toastSuccessNotify("Registered succesfully")
 
