@@ -21,7 +21,7 @@ const AuthContextProvider = ({children}) => {
    }, [])
    
   let navigate = useNavigate ();
-  const createUser = async (email, password) => {
+  const createUser = async (email, password, displayName) => {
     try {
       let userCredential = await createUserWithEmailAndPassword (
         auth,
