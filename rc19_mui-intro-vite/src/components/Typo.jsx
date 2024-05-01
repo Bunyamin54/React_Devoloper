@@ -8,7 +8,8 @@ const Typo = () => {
 
       <Typography variant="button"  color="blue"  > MUI Typo </Typography>
       <Typography variant="body1"  color="palegreen"  > Button Text </Typography>
-      <Typography variant="body2" sx={{color:"blue", backgroundColor:"pink", mt:"1rem" }}  > Sx probu</Typography>
+      <Typography variant="body2" sx={{color:"blue", backgroundColor:"pink", mt:"1rem" }}  
+      align="center"  > Sx probu</Typography>
     </div>
   )
 }
