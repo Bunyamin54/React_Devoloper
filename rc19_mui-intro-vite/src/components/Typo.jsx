@@ -3,11 +3,12 @@
 import Typography from "@mui/material/Typography"  // performas acisindan daha mantikli 
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
 
 const Typo = () => {
   return (
 
-    <Container maxWidth="sm">  
+    <Container maxWidth="md">  
   <Box sx={{padding: "1rem", display:"flex", flexDirection:"column", gap:"1rem" , border:"5px solid tomato" }}>
     
     <Typography variant="h3" component="h1" color="red" mt={4} > MUI Typo </Typography>
