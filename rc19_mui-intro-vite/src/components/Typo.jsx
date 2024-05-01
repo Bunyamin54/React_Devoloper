@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography"  // performas acisindan daha m
 const Typo = () => {
   return (
     <div>
-      <Typography> MUI Typo </Typography>
+      <Typography variant="h3" component="h1" > MUI Typo </Typography>
     </div>
   )
 }
