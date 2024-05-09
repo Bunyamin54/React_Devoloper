@@ -9,9 +9,17 @@ import { createTheme, ThemeProvider } from '@mui/material'
 
 function App() {
 
-const theme=createTheme
+const theme = createTheme ({
+  palette:{
+    primary: {
+      main: "#bede",
+    }
+  }
+}
+)
   return (
     <>
+    <ThemeProvider theme= {theme}/>
      {/* <Typo/>
      <TextFieldComp/> */}
      <AppbarComp/>

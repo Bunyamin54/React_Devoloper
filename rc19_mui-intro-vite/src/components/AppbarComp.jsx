@@ -39,9 +39,9 @@ function AppbarComp() {
     // <AppBar position="static" sx={{ backgroundColor: "secondary.light" }}>
     <>
     
-      <AppBar position="static" sx={{backgroundColor: "secondary.light"}}>
+      <AppBar position="static" color="primary">
         <Container maxWidth="xl">
-          <Toolbar disableGutters sx={{ color: "red" }}>
+          <Toolbar disableGutters sx={{ color: "white" }}>
             <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
             <Typography
               variant="h6"
