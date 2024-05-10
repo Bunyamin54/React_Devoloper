@@ -9,7 +9,7 @@ export const CLEAR_TODO = 'CLEAR_TODO'
 //? action funtion declaration
 
 export const addTodo = (payload) => ({ type: ADD_TODO, payload })
-
+export const clearTodo= ()=> ({type: CLEAR_TODO})
 
 
 
@@ -20,7 +20,7 @@ export const addTodo = (payload) => ({ type: ADD_TODO, payload })
 //?  baslangic durumnlari
 const initialState = {
 
-  todoList: [{ id: new Date(). getTime(), text: "work redux", competed: false}]
+  todoList: [{ id: new Date(). getTime(), text: "work redux", competed: true}]
 
 }
 
@@ -28,7 +28,10 @@ export const todoReducer (state = initialState, { type, payload }) => {
   switch (type) {
 
   case ADD_TODO:
-    return [...state.todoList,  {id:new Date(). getTime(), text:payload, competed:false}]
+    return { todoList: [...state.todoList,  {id:new Date(). getTime(), text:payload, competed:false}]}
+
+    case CLEAR_TODO:
+    return initialState
 
   default:
     return state

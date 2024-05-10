@@ -5,7 +5,8 @@ import { CLR, DEC, INC } from '../../store/counterReduser';
 const Counter = () => {
   // ? global statt'in consume yapilmasi
 
-  const count = useSelector (state => state.count);
+  // const count = useSelector (state => state.counter.count);
+  const {count }= useSelector ((state) => state.counter)
   const dispatch = useDispatch ();
 
   return (

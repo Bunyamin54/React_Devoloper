@@ -1,14 +1,21 @@
+import { useDispatch, useSelector } from "react-redux"
 import TodoItem from "./TodoItem"
 
 const TodoList = () => {
+
+
+//? 
+const todoList= useSelector(( state) => state.todo.todoList)
+const dispatch = useDispatch()
+
   const handleClearList = () => {
-    dispatch(clearTodo())
+   dispatch(clearTodo())
   }
 
   return (
     <div>
       <div>
-        {[1, 2, 3]?.map((todo) => (
+        {todoList?.map((todo) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
       </div>
