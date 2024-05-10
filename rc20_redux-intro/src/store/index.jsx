@@ -9,8 +9,8 @@ import { todoReducer } from "./todoReduser"
 
 const rootReducer = combineReducers({
 
- counterReducer,
- todoReducer,
+ count : counterReducer,
+ todo: todoReducer,
 
 
 })
