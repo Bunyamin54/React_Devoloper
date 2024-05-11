@@ -13,3 +13,6 @@ let y = false
 // let z : any
 
 //?   "removeComments": true,       bu ozellik product asamasinda yorumlarin gosterilmemesini saglar.  musteriye cikacak olan urunde yorumlar bu sekilde kaldirilmis olur
+
+
+//?  root dir ve "outDir": "./",   
