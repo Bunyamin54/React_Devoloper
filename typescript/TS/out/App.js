@@ -1,12 +1,10 @@
 console.log("Hello World");
-// const x = 3
-let x = 3;
-//! x = false     bu ozelligi kullanirsak  hata olursa cikti vermez   // "noEmitOnError": true,    katilik seviyesi  ts de 
-let y = false;
-// let y = false
-// let z : any
-//?   "removeComments": true,       bu ozellik product asamasinda yorumlarin gosterilmemesini saglar.  musteriye cikacak olan urunde yorumlar bu sekilde kaldirilmis olur
-
-
-//?  root dir ve "outDir": "./",     root yani src de yaptigim degisikliklerin musterininin yani out dir dosyasina gecisini sagla bu komutlar aktif halae gelirse
-
+let x;
+let myTuple;
+myTuple = [13.4, false, "Hello world",];
+let arrTuples;
+arrTuples = [[1, 'Mark'], [2, 'anthony']];
+arrTuples.push([3, 'Bunyamin']);
+console.log(1);
+console.log(0);
+console.log("XS");
