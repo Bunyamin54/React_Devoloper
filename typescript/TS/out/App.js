@@ -1,10 +1,12 @@
 console.log("Hello World");
-let x;
-let myTuple;
-myTuple = [13.4, false, "Hello world",];
-let arrTuples;
-arrTuples = [[1, 'Mark'], [2, 'anthony']];
-arrTuples.push([3, 'Bunyamin']);
-console.log(1);
-console.log(0);
-console.log("XS");
+function checkNumber(n) {
+    if (typeof n === 'number') {
+    }
+    else {
+    }
+    return 'Hello';
+}
+let xyz = '0';
+xyz = 'Hello';
+xyz = true;
+xyz = 3;

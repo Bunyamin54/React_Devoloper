@@ -118,3 +118,29 @@ console.log("Hello World")
 //     return 3  // icerisinde return olmayan foknsiyonlari donusturur
 // }
 
+//? union birlesim  more than one data type birlestirabilir
+
+// function checkNumber(n: (string | number)): string {
+//     if (typeof n === 'number') {
+
+
+          
+//     } else {
+    
+//     }
+//     return 'Hello'
+// } 
+
+
+// let xyz : string | boolean | number = '0'
+
+// xyz = 'Hello'
+
+// xyz = true
+
+// xyz = 3
+
+// ? Type Aliases
+
+type Check = string | number
+
