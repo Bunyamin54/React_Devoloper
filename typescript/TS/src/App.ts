@@ -142,5 +142,24 @@ console.log("Hello World")
 
 // ? Type Aliases
 
-type Check = string | number
+// type Check = string | number | boolean
 
+// let f : Check = 0 
+
+// f= 0
+
+// f= 'Merhaba'
+
+// f= false
+
+// let g : string | number
+// let h: string | number
+// let i : Check
+
+// ? String Literals  degiskenin alabilecegi tipleri degerleri belirliyoruz. 
+
+type Car = 'BMW' | 'Audi'
+
+let car1: Car = 'BMW'
+let car2: Car = 'BMW'
+let car3: Car= 'Fiat'
