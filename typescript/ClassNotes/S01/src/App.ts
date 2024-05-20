@@ -275,27 +275,69 @@ console.log(add(3,'Merhaba'))
 
 //? Intersection  iki type birlestiriliyor
 
- type Book = {
-    book_id: number;
-    book_name: string;
-  }
+//  type Book = {
+//     book_id: number;
+//     book_name: string;
+//   }
     
-type Author = {
-    Author_Id: number;
-    Author_name: string;
-  }
+// type Author = {
+//     Author_Id: number;
+//     Author_name: string;
+//   }
     
-type Intersected_type = Book & Author;
+// type Intersected_type = Book & Author;
     
-  let book1: Intersected_type = {
-    book_id: 1234,
-    book_name: "Lord of the Rings",
-    Author_Id: 1892,
-    Author_name: "J. R. R. Tolkien",
-  };
+//   let book1: Intersected_type = {
+//     book_id: 1234,
+//     book_name: "Lord of the Rings",
+//     Author_Id: 1892,
+//     Author_name: "J. R. R. Tolkien",
+//   };
 
-  let book2: Book ={
-    book_id : 1,
-    book_name: 'FS'
+//   let book2: Book ={
+//     book_id : 1,
+//     book_name: 'FS'
 
-  }
+//   }
+
+//? Type assertions  - birseyi olmasindan istedigimiz baska bir type donusturmek icin kullaniriz
+
+// let score: unknown ='350';
+
+// console.log(score.length)
+// console.log((<string>score). length)
+// console.log((score as string).length)
+
+
+// ? Functions  ? opsiaonaller  ? ile gosterilir ona birakilir
+
+// function selamla (greet:string, name?:string): string {
+//     if(!name) = 'user'
+//     return `${greet} ${name}`
+// }
+
+// selamla('Hi' , 'Eren')
+// selamla('Hi')
+
+// // ? function overload
+
+// function add (a:string, b:string):string;
+// function add (a:number, b:number):number;
+// function add (a:any, b:any):any{
+//     return a+b
+// }
+
+// console.log(add('Hello ', 'Cohort14'))
+// console.log(add(3,'Merhaba'))
+ 
+//? rest parameters 
+
+function add (num1: number, ...numbers:number[]):void {
+    let total = num1;
+
+    numbers.forEach(number=> total+number)
+    console.log(total)
+}
+
+add(5)
+add(1,2,3,4,5)
