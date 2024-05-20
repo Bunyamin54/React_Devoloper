@@ -69,3 +69,4 @@ const person1: Person = {
 //? Generics  smilar C#
 
 
+
