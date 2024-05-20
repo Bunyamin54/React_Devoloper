@@ -68,5 +68,12 @@ const person1: Person = {
 
 //? Generics  smilar C#
 
+//? built in Generics
 
+/* const names: string [ ] = []
 
+const names2: Array <string> = ['Hello ', 'World']
+
+const nums: Array <number> = [1,2,3]
+
+ */
