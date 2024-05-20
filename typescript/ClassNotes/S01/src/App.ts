@@ -273,7 +273,7 @@ console.log(add(3,'Merhaba'))
 
 // }
 
-Intersection
+//? Intersection  iki type birlestiriliyor
 
  type Book = {
     book_id: number;
