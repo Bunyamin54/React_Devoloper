@@ -65,3 +65,7 @@ const person1: Person = {
 // const sq = new Square(red.color  ,shape1.area)
 
 // console.log(sq)
+
+//? Generics  smilar C#
+
+
