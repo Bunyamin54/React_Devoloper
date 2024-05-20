@@ -1,0 +1,31 @@
+.header {
+  text-align: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  margin-top: 15rem;
+}
+.header .text-shadow {
+  color: #171b20;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 0.2rem;
+  animation: flicker 0.5s ease-in-out infinite alternate;
+  transition: all 0.5s ease-in-out;
+}
+.header .text-shadow:hover {
+  color: rgba(205, 137, 12, 0.7960784314);
+  cursor: pointer;
+}
+@keyframes flicker {
+  0% {
+    opacity: 0.5;
+    text-shadow: 2px 2px 10px rgba(205, 137, 12, 0.7960784314);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=Header.css.map */
