@@ -242,14 +242,60 @@ console.log(add('Hello ', 'Cohort14'))
 console.log(add(3,'Merhaba'))
  */
 
-//rest parameters
+// //rest parameters
 
-function add (num1: number, ...numbers:number[]):void{
-    let total = num1;
+// function add (num1: number, ...numbers:number[]):void{
+//     let total = num1;
 
-    numbers.forEach(number=> total+=number)
-    console.log(total)
-}
+//     numbers.forEach(number=> total+=number)
+//     console.log(total)
+// }
 
-add(5)
-add(1,2,3,4,5)
+// add(5)
+// add(1,2,3,4,5)
+
+
+// Interse
+
+// Objct 
+
+// const car :  {
+
+//   make: string,
+//   model:string,
+//   year:number,   //! readonly bir kere yazildiktan sonra degistirlelmiyor readonly key wordu - aatama yapilmaz
+//   sunroof?: boolean // ! oppsional ? ile yapilir
+// } = {
+
+//  make :'toyota',
+//  model:'corolla',
+//  year: 2020,
+
+// }
+
+Intersection
+
+ type Book = {
+    book_id: number;
+    book_name: string;
+  }
+    
+type Author = {
+    Author_Id: number;
+    Author_name: string;
+  }
+    
+type Intersected_type = Book & Author;
+    
+  let book1: Intersected_type = {
+    book_id: 1234,
+    book_name: "Lord of the Rings",
+    Author_Id: 1892,
+    Author_name: "J. R. R. Tolkien",
+  };
+
+  let book2: Book ={
+    book_id : 1,
+    book_name: 'FS'
+
+  }

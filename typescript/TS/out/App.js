@@ -10,3 +10,4 @@ let xyz = '0';
 xyz = 'Hello';
 xyz = true;
 xyz = 3;
+

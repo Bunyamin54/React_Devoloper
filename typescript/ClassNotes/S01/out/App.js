@@ -202,11 +202,11 @@ function add (a:any, b:any):any{
 console.log(add('Hello ', 'Cohort14'))
 console.log(add(3,'Merhaba'))
  */
-//rest parameters
-function add(num1, ...numbers) {
-    let total = num1;
-    numbers.forEach(number => total += number);
-    console.log(total);
-}
-add(5);
-add(1, 2, 3, 4, 5);
+// //rest parameters
+// function add (num1: number, ...numbers:number[]):void{
+//     let total = num1;
+//     numbers.forEach(number=> total+=number)
+//     console.log(total)
+// }
+// add(5)
+// add(1,2,3,4,5)
