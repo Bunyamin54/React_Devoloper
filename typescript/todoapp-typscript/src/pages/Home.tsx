@@ -8,7 +8,8 @@ interface TodoType {
 }
 
 const Home = () => {
-   const [todos,setTodos] = useState([])
+  //  const [todos,setTodos] = useState<TodoType[]>([])
+   const [todos,setTodos] = useState([] as TodoType[])
 
 
 
