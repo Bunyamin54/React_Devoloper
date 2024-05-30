@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from "axios"
 import { Container, Typography } from '@mui/material';
 import AddTodoComp from '../components/AddTodoComp';
+import TodoList from '../components/TodoList';
 interface TodoType {
 
   todo: string;
@@ -58,6 +59,7 @@ const Home = () => {
       Todo App With TypeScript
     </Typography>
     <AddTodoComp addTodo= {addTodo}/>
+    <TodoList/>
     </Container>
   )
 }
