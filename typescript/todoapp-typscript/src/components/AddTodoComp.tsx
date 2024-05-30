@@ -13,6 +13,7 @@ const AddTodoComp = ({addTodo}: IAddTodoComp) => {
    const[text, setText] = useState("")
     const handleClick = () => {
      console.log(text)
+     addTodo(text)
      setText("")
     }
 
