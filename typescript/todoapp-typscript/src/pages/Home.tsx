@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from "axios"
+import { Container, Typography } from '@mui/material';
 interface TodoType {
 
   todo: string;
@@ -26,9 +27,11 @@ const Home = () => {
    },[])
 
   return (
-    <div onClick={()=>setTodos([{id:5, todo:"eren", isDone:"true"}])}>
-      <Home/>
-    </div>
+    <Container>
+    <Typography color="error" align='center' variant='h2' component={"h1"} mt={5}>
+      Todo App With TypeScript
+    </Typography>
+    </Container>
   )
 }
 
