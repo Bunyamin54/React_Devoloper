@@ -35,7 +35,7 @@ const Home = () => {
 
    type AddFn = (text:string) => Promise<void>
 
-     const addTodo: AddFn = async (text:string) => {
+     const addTodo: AddFn = async text => {
 
       try {
         await axios.post(url,{todo:text,isDone:false})
@@ -57,7 +57,7 @@ const Home = () => {
     <Typography color="error" align='center' variant='h2' component={"h1"} mt={5}>
       Todo App With TypeScript
     </Typography>
-    <AddTodoComp addTodo= {addTodo}
+    <AddTodoComp addTodo= {addTodo}/>
     </Container>
   )
 }
