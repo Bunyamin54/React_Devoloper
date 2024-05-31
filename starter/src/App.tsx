@@ -1,9 +1,23 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="bg-slate-500 min-h-screen text-center">
-      <p className="text-white p-20">Hello Typescript + TailwindCss</p>
+      <BrowserRouter>
+      <Routes>
+
+     <Route path="/" element={} />
+     <Route path="/favorites" element={} />
+
+
+
+
+      </Routes>
+      
+      
+      
+      </BrowserRouter>
     </div>
   );
 }
