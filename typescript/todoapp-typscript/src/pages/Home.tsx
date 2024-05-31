@@ -59,7 +59,7 @@ const Home = () => {
       Todo App With TypeScript
     </Typography>
     <AddTodoComp addTodo= {addTodo}/>
-    <TodoList/>
+    <TodoList todos={todos}/>
     </Container>
   )
 }

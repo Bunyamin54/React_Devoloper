@@ -1,7 +1,13 @@
 import { IconButton, ListItem, ListItemText } from "@mui/material"
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const TodoListItem = () => {
+
+
+interface ITodoListItem {
+
+  todo: TodoType;
+}
+const TodoListItem:FC<ITodoListItem> = ({todo}) => {
   return (
     <ListItem
     disableGutters
@@ -11,7 +17,7 @@ const TodoListItem = () => {
       </IconButton>
     }
   >
-    <ListItemText primary={`Line item`} />
+    <ListItemText primary={todo.todo} />
     </ListItem>
   )
 }
