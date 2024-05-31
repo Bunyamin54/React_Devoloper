@@ -14,12 +14,7 @@ function App() {
      <Route path="/" element={<Home/>} />
      <Route path="/favorites" element={<FavoritesPage/>} />
 
-
-
-
       </Routes>
-      
-      
       
       </BrowserRouter>
     </div>
