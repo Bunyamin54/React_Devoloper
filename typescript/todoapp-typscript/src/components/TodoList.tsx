@@ -1,6 +1,13 @@
 import { Grid, Typography } from '@mui/material'
 import TodoListItem from './TodoListItem'
 
+
+interface ITodoList {
+
+  todos:TodoType[]
+}
+
+
 const TodoList = () => {
   return (
       <Grid container sx={{ d:"flex", justifyContent:"center", alignItems:"center", gap:"0.5 rem"}}>

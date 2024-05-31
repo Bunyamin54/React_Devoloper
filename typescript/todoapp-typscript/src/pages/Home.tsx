@@ -3,12 +3,12 @@ import axios from "axios"
 import { Container, Typography } from '@mui/material';
 import AddTodoComp from '../components/AddTodoComp';
 import TodoList from '../components/TodoList';
-interface TodoType {
+// interface TodoType {
 
-  todo: string;
-  isDone:boolean;
-  id: string | number //? iki veri tpinide kabul edecek 
-}
+//   todo: string;
+//   isDone:boolean;
+//   id: string | number //? iki veri tpinide kabul edecek 
+// }
 
 const Home = () => {
    const [todos,setTodos] = useState<TodoType[]>([]);
